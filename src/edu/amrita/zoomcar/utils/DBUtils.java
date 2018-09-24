@@ -102,7 +102,6 @@ public class DBUtils {
     	PreparedStatement preparedStatement = connection.prepareStatement(SQL);
         preparedStatement.setString(1 , name);
         preparedStatement.setString(2 , password);
-        System.out.println(preparedStatement.toString());
 
         ResultSet resultSet = preparedStatement.executeQuery();
 
