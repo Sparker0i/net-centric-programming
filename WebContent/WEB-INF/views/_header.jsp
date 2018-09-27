@@ -9,8 +9,8 @@
  
      <!-- User store in session with attribute: loggedInUser -->
      Hello <b>${loggedInUser.userName}</b>
-   <br/>
-     Search <input name="search">
+     |
+     <a href="${pageContext.request.contextPath}/logout">Logout</a>
  
   </div>
  

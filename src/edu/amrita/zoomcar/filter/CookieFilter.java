@@ -39,7 +39,7 @@ public class CookieFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpSession session = req.getSession();
  
-        User userInSession = MyUtils.getLoginedUser(session);
+        User userInSession = MyUtils.getLoggedUser(session);
         // 
         if (userInSession != null) {
             session.setAttribute("COOKIE_CHECKED", "CHECKED");

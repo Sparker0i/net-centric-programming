@@ -27,7 +27,7 @@ public class MyUtils {
     	session.setAttribute(MyUtils.LOGGED_IN , user);
     }
     
-    public static User getLoginedUser(HttpSession session) {
+    public static User getLoggedUser(HttpSession session) {
         return (User) session.getAttribute(MyUtils.LOGGED_IN);
     }
     

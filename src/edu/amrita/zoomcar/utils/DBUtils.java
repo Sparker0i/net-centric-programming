@@ -107,7 +107,6 @@ public class DBUtils {
         preparedStatement.setString(2 , password);
 
         ResultSet resultSet = preparedStatement.executeQuery();
-
         return sendUser(resultSet);
     }
     

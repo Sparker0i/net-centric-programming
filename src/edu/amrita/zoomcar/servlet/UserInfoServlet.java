@@ -27,7 +27,7 @@ public class UserInfoServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         // Check User has logged on
-        User loginedUser = MyUtils.getLoginedUser(session);
+        User loginedUser = MyUtils.getLoggedUser(session);
 
         // Not logged in
         if (loginedUser == null) {

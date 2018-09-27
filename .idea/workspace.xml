@@ -7,11 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9514751a-7730-4131-ac6c-57cb8e1995df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/LogoutServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/_header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/filter/CookieFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/filter/CookieFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/CarListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/CarListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/UserInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/UserInfoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/ViewCarServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/ViewCarServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/MyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/MyUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,9 +81,9 @@
           <entry key="class" value="1" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="2" />
-          <entry key="java" value="16" />
+          <entry key="java" value="19" />
           <entry key="json" value="2" />
-          <entry key="jsp" value="3" />
+          <entry key="jsp" value="4" />
           <entry key="md" value="3" />
           <entry key="xml" value="1" />
         </counts>
@@ -88,9 +92,9 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="HTML" value="2" />
-          <entry key="JAVA" value="16" />
+          <entry key="JAVA" value="19" />
           <entry key="JSON" value="2" />
-          <entry key="JSP" value="3" />
+          <entry key="JSP" value="4" />
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="1" />
@@ -100,18 +104,18 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="gitignore" value="42" />
-          <entry key="java" value="1518" />
+          <entry key="java" value="1598" />
           <entry key="json" value="58" />
-          <entry key="jsp" value="316" />
+          <entry key="jsp" value="360" />
           <entry key="md" value="1449" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="1518" />
+          <entry key="JAVA" value="1598" />
           <entry key="JSON" value="58" />
-          <entry key="JSP" value="316" />
+          <entry key="JSP" value="360" />
           <entry key="Markdown" value="1449" />
           <entry key="PLAIN_TEXT" value="42" />
         </counts>
@@ -123,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/loginView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="153">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -135,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="-216">
               <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -148,7 +152,7 @@
         <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
-              <caret line="90" column="74" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="74" />
+              <caret line="81" column="53" selection-start-line="80" selection-start-column="12" selection-end-line="81" selection-end-column="53" />
               <folding>
                 <element signature="e#700#701#0" expanded="true" />
                 <element signature="e#717#718#0" expanded="true" />
@@ -157,11 +161,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/RegisterServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="95" column="74" selection-start-line="95" selection-start-column="74" selection-end-line="95" selection-end-column="74" />
+            <state relative-caret-position="85">
+              <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#296#297#0" expanded="true" />
@@ -171,47 +175,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/MyUtils.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/LogoutServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="119">
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#236#237#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-183">
-              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/filter/JDBCFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/filter/CookieFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/User.java">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/_header.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -221,8 +203,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -250,8 +232,11 @@
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/loginView.jsp" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/User.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp" />
-        <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/RegisterServlet.java" />
+        <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" />
+        <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/MyUtils.java" />
+        <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/LogoutServlet.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/_header.jsp" />
       </list>
     </option>
   </component>
@@ -362,7 +347,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Sparker0i/net-centric-programming/src/edu/amrita/zoomcar/beans/User.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538069036964" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538070899232" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/WebContent/WEB-INF/lib/json-simple-1.1.1.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -473,12 +458,12 @@
       <updated>1537734528050</updated>
       <workItem from="1537734531030" duration="838000" />
       <workItem from="1537769096043" duration="5371000" />
-      <workItem from="1538026265034" duration="11364000" />
+      <workItem from="1538026265034" duration="13148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17573000" />
+    <option name="totallyTimeSpent" value="19357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -636,23 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/loginView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -664,30 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/MyUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-183">
-          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/filter/JDBCFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -695,17 +639,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/filter/CookieFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="191">
+          <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="90" column="74" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="74" />
+          <caret line="81" column="53" selection-start-line="80" selection-start-column="12" selection-end-line="81" selection-end-column="53" />
           <folding>
             <element signature="e#700#701#0" expanded="true" />
             <element signature="e#717#718#0" expanded="true" />
@@ -713,14 +664,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/CarListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/filter/CookieFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/MyUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+          <folding>
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/RegisterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="95" column="74" selection-start-line="95" selection-start-column="74" selection-end-line="95" selection-end-column="74" />
+        <state relative-caret-position="85">
+          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#296#297#0" expanded="true" />
             <element signature="e#316#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/loginView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/_header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
           </folding>
         </state>
       </provider>

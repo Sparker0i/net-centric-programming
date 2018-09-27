@@ -30,7 +30,7 @@ public class CarListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     		throws ServletException, IOException {
     	HttpSession session = request.getSession();
-		User loginedUser = MyUtils.getLoginedUser(session);
+		User loginedUser = MyUtils.getLoggedUser(session);
 
         // Not logged in
         if (loginedUser == null) {

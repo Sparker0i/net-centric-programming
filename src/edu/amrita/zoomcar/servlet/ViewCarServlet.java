@@ -3,7 +3,6 @@ package edu.amrita.zoomcar.servlet;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -32,7 +31,7 @@ public class ViewCarServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = req.getSession();
-		User loginedUser = MyUtils.getLoginedUser(session);
+		User loginedUser = MyUtils.getLoggedUser(session);
 
         // Not logged in
         if (loginedUser == null) {
@@ -71,7 +70,7 @@ public class ViewCarServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        User loginedUser = MyUtils.getLoginedUser(session);
+        User loginedUser = MyUtils.getLoggedUser(session);
 
         // Not logged in
         if (loginedUser == null) {
