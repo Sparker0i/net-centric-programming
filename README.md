@@ -15,4 +15,8 @@ An honest effort helping you to rent a car
 
 # Pre-steps
 - Download and install MySQL on your PC
+- Run the commands in MySQL as given in the DB.md file
+- Modify db.json inside WebContent/WEB-INF directory to have your MySQL Username and password in the respective fields
 
+# Running the Server
+- Once done with all the changes above, click on Run button (Play Icon) just above the Tab bar
