@@ -17,12 +17,12 @@
       <form method="POST" action="${pageContext.request.contextPath}/login">
          <table border="0">
             <tr>
-               <td>User Name</td>
+               <td>User ID</td>
                <td><input type="text" name="userName" value= "${user.userId}" /> </td>
             </tr>
             <tr>
                <td>Password</td>
-               <td><input type="text" name="password" value= "${user.password}" /> </td>
+               <td><input type="password" name="password" value= "${user.password}" /> </td>
             </tr>
             <tr>
                <td>Remember me</td>
@@ -31,7 +31,7 @@
             <tr>
                <td colspan ="2">
                   <input type="submit" value= "Submit" />
-                  <a href="${pageContext.request.contextPath}/createAccount">Create an Account</a>
+                  <a href="${pageContext.request.contextPath}/register">Create an Account</a>
                </td>
             </tr>
          </table>
