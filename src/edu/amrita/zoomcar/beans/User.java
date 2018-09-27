@@ -9,7 +9,7 @@ public class User {
     		PASSWORD = "PASSWORD",
     		USER_NAME = "USER_NAME",
     		GENDER = "GENDER",
-    		EMAIL = "EMAIL",
+    		E_MAIL = "E_MAIL",
     		PHONE = "PHONE",
     		DOB = "DOB";
 

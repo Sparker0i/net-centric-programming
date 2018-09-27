@@ -87,7 +87,7 @@ public class DBUtils {
             user.setUserId(resultSet.getString(User.USER_ID));
             user.setPassword(resultSet.getString(User.PASSWORD));
             user.setDob(convertToUtil(resultSet.getTimestamp(User.DOB)));
-            user.setEmail(resultSet.getString(User.EMAIL));
+            user.setEmail(resultSet.getString(User.E_MAIL));
             user.setPhone(resultSet.getString(User.PHONE));
             user.setGender(resultSet.getString(User.GENDER));
             user.setUserName(resultSet.getString(User.USER_NAME));
@@ -110,7 +110,7 @@ public class DBUtils {
             user.setUserId(resultSet.getString(User.USER_ID));
             user.setPassword(resultSet.getString(User.PASSWORD));
             user.setDob(convertToUtil(resultSet.getTimestamp(User.DOB)));
-            user.setEmail(resultSet.getString(User.EMAIL));
+            user.setEmail(resultSet.getString(User.E_MAIL));
             user.setPhone(resultSet.getString(User.PHONE));
             user.setGender(resultSet.getString(User.GENDER));
             user.setUserName(resultSet.getString(User.USER_NAME));
@@ -125,7 +125,7 @@ public class DBUtils {
     			User.USER_NAME,
     			User.PASSWORD,
     			User.DOB,
-    			User.EMAIL,
+    			User.E_MAIL,
     			User.GENDER,
     			User.PHONE);
     	

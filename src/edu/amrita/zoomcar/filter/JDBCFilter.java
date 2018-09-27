@@ -82,7 +82,7 @@ public class JDBCFilter implements Filter{
             Connection conn = null;
             try {
                 // Create a Connection.
-                conn = DatabaseConnection.getConnection();
+                conn = DatabaseConnection.getConnection(req.getServletContext());
                 conn.setAutoCommit(false);
 
                 MyUtils.storeConnection(request, conn);
