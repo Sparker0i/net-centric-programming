@@ -1,22 +1,6 @@
 package edu.amrita.zoomcar.beans;
 
 public class Car {
-    private static final String FUEL_TYPE_PETROL = "Petrol";
-    private static final String FUEL_TYPE_DIESEL = "Diesel";
-    private static final String FUEL_TYPE_CNG = "CNG";
-    private static final String FUEL_TYPE_LPG = "LPG";
-    private static final String FUEL_TYPE_ELECTRIC = "Electric";
-
-    private static final String CAR_TYPE_HATCHBACK = "Hatchback";
-    private static final String CAR_TYPE_SEDAN = "Sedan";
-    private static final String CAR_TYPE_SUV = "SUV";
-    private static final String CAR_TYPE_MUV = "MUV";
-    private static final String CAR_TYPE_LUXURY = "Luxury";
-    private static final String CAR_TYPE_RACING = "Racing";
-
-    private static final String GEAR_TYPE_AT = "AT";
-    private static final String GEAR_TYPE_MT = "MT";
-
     private Integer carId;
     private Float costPerDay , price;
     private String carName , numberPlate , company , model , version , color, fuelType, carType , gearType , features;

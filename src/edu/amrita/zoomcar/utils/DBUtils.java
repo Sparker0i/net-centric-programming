@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Locale;
 
 import edu.amrita.zoomcar.beans.Car;
+import edu.amrita.zoomcar.beans.Transaction;
 import edu.amrita.zoomcar.beans.User;
 
 public class DBUtils {
@@ -130,6 +131,46 @@ public class DBUtils {
     	preparedStatement.setString(7, user.getPhone());
     	
     	preparedStatement.executeUpdate();
+    }
+
+    public static boolean checkTransactionForRange(Connection connection , Integer carId , java.util.Date startDate , java.util.Date endDate) throws SQLException {
+        String SQL = String.format("SELECT * FROM TRANSACTION WHERE %s = ?" , Transaction.CAR_ID);
+
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+        preparedStatement.setInt(1, carId);
+
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            java.util.Date
+                    start = convertToUtil(resultSet.getTimestamp(Transaction.START_DATE)),
+                    end = convertToUtil(resultSet.getTimestamp(Transaction.END_DATE));
+
+            if (startDate.after(start) && endDate.before(end))
+                return false;
+            else if (startDate.before(end))
+                return false;
+            else if (endDate.before(start))
+                return false;
+        }
+        return true;
+    }
+
+    public static void insertTransaction(Connection connection , Transaction transaction) throws SQLException {
+        String SQL = String.format("INSERT INTO TRANSACTION(%s , %s , %s , %s , %s) VALUES (? , ? , ? , ? , ?)" ,
+                Transaction.USER_ID,
+                Transaction.CAR_ID,
+                Transaction.START_DATE,
+                Transaction.END_DATE,
+                Transaction.DATE_OF_REQUEST);
+
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+        preparedStatement.setString(1, transaction.getUserId());
+        preparedStatement.setInt(2 , transaction.getCarId());
+        preparedStatement.setTimestamp(3 , convertToSQL(transaction.getStartDate()));
+        preparedStatement.setTimestamp(4 , convertToSQL(transaction.getEndDate()));
+        preparedStatement.setTimestamp(5 , convertToSQL(transaction.getDateOfRequest()));
+
+        preparedStatement.executeUpdate();
     }
     
     private static Timestamp convertToSQL(java.util.Date date) {

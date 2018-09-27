@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>User Info</title>
+    <title>Car Info</title>
 </head>
 <body>
 
@@ -49,7 +49,6 @@ Cost Per Day: <b>${car.costPerDay}</b>
 <br/>
 
 <p style="color: red;">${errorString}</p>
-
 
 <form method="POST" action="${pageContext.request.contextPath}/viewCar">
     <table border="1">

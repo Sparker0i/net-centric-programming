@@ -1,8 +1,12 @@
 package edu.amrita.zoomcar.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,11 +17,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import edu.amrita.zoomcar.beans.Car;
+import edu.amrita.zoomcar.beans.Transaction;
 import edu.amrita.zoomcar.beans.User;
 import edu.amrita.zoomcar.utils.DBUtils;
 import edu.amrita.zoomcar.utils.MyUtils;
 
-@WebServlet(urlPatterns = {"/viewCar"})
+@WebServlet(urlPatterns = {"/viewCar" , "/carView"})
 public class ViewCarServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -25,7 +30,7 @@ public class ViewCarServlet extends HttpServlet {
 		super();
 	}
 
-	String carId;
+	private String carId;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -43,6 +48,10 @@ public class ViewCarServlet extends HttpServlet {
 		Connection connection = MyUtils.getStoredConnection(req);
 
 		carId = req.getParameter(Car.CAR_ID);
+		if (carId == null) {
+		    carId = (String) req.getAttribute(Car.CAR_ID);
+        }
+        System.out.println("Car : " + carId);
 		Car car = null;
 		String errorString = null;
 
@@ -54,7 +63,7 @@ public class ViewCarServlet extends HttpServlet {
 			errorString = e.getMessage();
 		}
 
-		if (errorString != null && car == null) {
+		if (errorString != null) {
             resp.sendRedirect(req.getServletPath() + "/productList");
             return;
         }
@@ -79,12 +88,36 @@ public class ViewCarServlet extends HttpServlet {
             return;
         }
 
-	    String from = req.getParameter("fromDate");
-		String to = req.getParameter("toDate");
-		System.out.println(from + " " + to);
+		Date from = null , to = null , request = new Date();
+		try {
+			from = new SimpleDateFormat("YYYY-MM-DD").parse(req.getParameter("fromDate"));
+			to = new SimpleDateFormat("YYYY-MM-DD").parse(req.getParameter("toDate"));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 
-        resp.sendRedirect(req.getContextPath() + "/viewCar?CAR_ID=" + carId);
+		User user = MyUtils.getLoggedUser(req.getSession());
+		Connection connection = MyUtils.getStoredConnection(req);
+		String errorString = null;
+        PrintWriter out = resp.getWriter();
+        try {
+            if (DBUtils.checkTransactionForRange(connection , Integer.parseInt(carId) , from , to)) {
+                DBUtils.insertTransaction(connection , new Transaction(user.getUserId() , Integer.parseInt(carId) , from , to , request));
+                alert(out , "Success");
+            }
+            else {
+                errorString = "Car has already been booked for the dates";
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            alert(out , "You have already booked a car for the date");
+        }
 	}
 
-
+	private void alert(PrintWriter out , String s) {
+	    out.println("<script type='text/javascript'>");
+        out.println("alert('" + s + "');");
+        out.println("location='/';");
+        out.println("</script>");
+    }
 }
