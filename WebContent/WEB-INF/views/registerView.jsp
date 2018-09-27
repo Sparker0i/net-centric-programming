@@ -24,7 +24,7 @@
     <table border="0">
         <tr>
             <td>User ID</td>
-            <td><input type="text" name="userName" title="User ID" /> </td>
+            <td><input type="text" name="userId" title="User ID" /> </td>
         </tr>
         <tr>
             <td>Password</td>
@@ -33,6 +33,10 @@
         <tr>
             <td>Confirm Password</td>
             <td><input type="password" name="confirmPassword" title="Confirm Password" /> </td>
+        </tr>
+        <tr>
+            <td>User Name</td>
+            <td><input type="text" name="userName" title="User Name" /> </td>
         </tr>
         <tr>
             <td>Gender</td>

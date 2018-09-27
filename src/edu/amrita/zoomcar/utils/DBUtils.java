@@ -81,7 +81,10 @@ public class DBUtils {
         preparedStatement.setString(1 , name);
 
         ResultSet resultSet = preparedStatement.executeQuery();
+        return sendUser(resultSet);
+    }
 
+    private static User sendUser(ResultSet resultSet) throws SQLException{
         while (resultSet.next()) {
             User user = new User();
             user.setUserId(resultSet.getString(User.USER_ID));
@@ -105,18 +108,7 @@ public class DBUtils {
 
         ResultSet resultSet = preparedStatement.executeQuery();
 
-        while (resultSet.next()) {
-            User user = new User();
-            user.setUserId(resultSet.getString(User.USER_ID));
-            user.setPassword(resultSet.getString(User.PASSWORD));
-            user.setDob(convertToUtil(resultSet.getTimestamp(User.DOB)));
-            user.setEmail(resultSet.getString(User.E_MAIL));
-            user.setPhone(resultSet.getString(User.PHONE));
-            user.setGender(resultSet.getString(User.GENDER));
-            user.setUserName(resultSet.getString(User.USER_NAME));
-            return user;
-        }
-        return null;
+        return sendUser(resultSet);
     }
     
     public static void insertUser(Connection connection , User user) throws SQLException {
@@ -141,11 +133,11 @@ public class DBUtils {
     	preparedStatement.executeUpdate();
     }
     
-    public static Timestamp convertToSQL(java.util.Date date) {
+    private static Timestamp convertToSQL(java.util.Date date) {
     	return new Timestamp(date.getTime());
     }
     
-    public static java.util.Date convertToUtil(Timestamp date) {
+    private static java.util.Date convertToUtil(Timestamp date) {
     	return new Date(date.getTime());
     }
 }
