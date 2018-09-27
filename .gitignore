@@ -4,3 +4,4 @@
 out/
 
 src/db.json
+WebContent/WEB-INF/db.json
