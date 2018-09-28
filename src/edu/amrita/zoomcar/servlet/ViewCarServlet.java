@@ -90,15 +90,14 @@ public class ViewCarServlet extends HttpServlet {
 
 		Date from = null , to = null , request = new Date();
 		try {
-			from = new SimpleDateFormat("YYYY-MM-DD").parse(req.getParameter("fromDate"));
-			to = new SimpleDateFormat("YYYY-MM-DD").parse(req.getParameter("toDate"));
+		    from = new SimpleDateFormat("yyyy-MM-dd").parse(req.getParameter("fromDate"));
+			to = new SimpleDateFormat("yyyy-MM-dd").parse(req.getParameter("toDate"));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 
 		User user = MyUtils.getLoggedUser(req.getSession());
 		Connection connection = MyUtils.getStoredConnection(req);
-		String errorString = null;
         PrintWriter out = resp.getWriter();
         try {
             if (DBUtils.checkTransactionForRange(connection , Integer.parseInt(carId) , from , to)) {
@@ -106,11 +105,11 @@ public class ViewCarServlet extends HttpServlet {
                 alert(out , "Success");
             }
             else {
-                errorString = "Car has already been booked for the dates";
+                alert(out , "You have already booked a car for the date");
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            alert(out , "You have already booked a car for the date");
+            alert(out , "Error in Connectivity. Please try again later");
         }
 	}
 

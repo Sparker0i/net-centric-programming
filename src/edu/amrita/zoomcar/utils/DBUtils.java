@@ -140,19 +140,30 @@ public class DBUtils {
         preparedStatement.setInt(1, carId);
 
         ResultSet resultSet = preparedStatement.executeQuery();
+        int count = 0;
         while (resultSet.next()) {
+            System.out.println(++count);
             java.util.Date
                     start = convertToUtil(resultSet.getTimestamp(Transaction.START_DATE)),
                     end = convertToUtil(resultSet.getTimestamp(Transaction.END_DATE));
 
+            System.out.println("Util : " + start + " " + end + "\n" + startDate + " " + endDate);
+
             if (startDate.after(start) && endDate.before(end))
                 return false;
-            else if (startDate.before(end))
+            else if (inBetween(startDate , start , end))
                 return false;
-            else if (endDate.before(start))
+            else if (inBetween(endDate , start , end))
+                return false;
+            else if (start.after(startDate) && end.before(endDate))
                 return false;
         }
+        System.out.println("True");
         return true;
+    }
+
+    private static boolean inBetween(java.util.Date date , java.util.Date start , java.util.Date end) {
+        return date.after(start) && date.before(end);
     }
 
     public static void insertTransaction(Connection connection , Transaction transaction) throws SQLException {
