@@ -1,5 +1,6 @@
 package edu.amrita.zoomcar.database;
 
+import com.mysql.cj.jdbc.MysqlDataSource;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -7,14 +8,13 @@ import org.json.simple.parser.ParseException;
 import javax.servlet.ServletContext;
 import java.io.*;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
     private static Connection connection;
     private static JSONParser jsonParser;
 
-    private static String URL, USER, PASS;
+    private static String USER, PASS;
 
     private static void getCredentials(ServletContext context) {
         if (jsonParser == null)
@@ -26,7 +26,6 @@ public class DatabaseConnection {
 
             JSONObject credentials = (JSONObject) object;
 
-            URL = "jdbc:mysql://localhost:3306/ZoomCar?useSSL=false";
             USER = (String) credentials.get("username");
             PASS = (String) credentials.get("password");
         }
@@ -38,17 +37,29 @@ public class DatabaseConnection {
     public static Connection getConnection(ServletContext context) {
         if (connection == null) {
             try {
-                Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
                 getCredentials(context);
-                connection = DriverManager.getConnection(URL, USER, PASS);
+                MysqlDataSource dataSource = getDataSource();
+                connection = dataSource.getConnection();
                 return connection;
-            } catch (Exception ex) {
+            } catch (SQLException ex) {
                 ex.printStackTrace();
             }
             return connection;
         }
         else
             return connection;
+    }
+
+    private static MysqlDataSource getDataSource() throws SQLException {
+        MysqlDataSource dataSource = new MysqlDataSource();
+        dataSource.setUseSSL(false);
+        dataSource.setServerName("localhost");
+        dataSource.setDatabaseName("ZoomCar");
+        dataSource.setAllowPublicKeyRetrieval(true);
+        dataSource.setPortNumber(3306);
+        dataSource.setUser(USER);
+        dataSource.setPassword(PASS);
+        return dataSource;
     }
 
     public static void disconnect() {
