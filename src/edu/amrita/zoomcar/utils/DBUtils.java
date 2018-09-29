@@ -183,6 +183,28 @@ public class DBUtils {
 
         preparedStatement.executeUpdate();
     }
+
+    public static List<Transaction> getTransactions(Connection connection , User user) throws SQLException {
+        String SQL = String.format("SELECT * FROM TRANSACTION WHERE %s = ?" ,
+                Transaction.USER_ID);
+
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+        preparedStatement.setString(1 , user.getUserId());
+
+        ResultSet resultSet = preparedStatement.executeQuery();
+        List<Transaction> transactions = new ArrayList<>();
+        while (resultSet.next()) {
+            Transaction transaction = new Transaction();
+            transaction.setCarId(resultSet.getInt(Transaction.CAR_ID));
+            transaction.setDateOfRequest(convertToUtil(resultSet.getTimestamp(Transaction.DATE_OF_REQUEST)));
+            transaction.setStartDate(convertToUtil(resultSet.getTimestamp(Transaction.START_DATE)));
+            transaction.setEndDate(convertToUtil(resultSet.getTimestamp(Transaction.END_DATE)));
+            transaction.setUserId(resultSet.getString(Transaction.USER_ID));
+
+            transactions.add(transaction);
+        }
+        return transactions;
+    }
     
     private static Timestamp convertToSQL(java.util.Date date) {
     	return new Timestamp(date.getTime());

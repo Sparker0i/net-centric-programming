@@ -23,6 +23,10 @@ public class Transaction {
         this.dateOfRequest = dateOfRequest;
     }
 
+    public Transaction() {
+
+    }
+
     public String getUserId() {
         return userId;
     }
