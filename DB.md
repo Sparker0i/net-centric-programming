@@ -1,4 +1,5 @@
     CREATE DATABASE ZoomCar;
+    USE DATABASE ZoomCar;
     
     CREATE TABLE USER(    
         USER_ID VARCHAR(30) PRIMARY KEY,          

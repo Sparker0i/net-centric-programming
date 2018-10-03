@@ -12,7 +12,7 @@
     <jsp:include page="_header.jsp"></jsp:include>
     <jsp:include page="_menu.jsp"></jsp:include>
  
-    <h3>Product List</h3>
+    <h3>Car List</h3>
  
     <p style="color: red;">${errorString}</p>
  
