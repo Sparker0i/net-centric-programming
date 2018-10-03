@@ -105,7 +105,7 @@ public class ViewCarServlet extends HttpServlet {
                 alert(out , "Success");
             }
             else {
-                alert(out , "You have already booked a car for the date");
+                alert(out , "The car has already been booked for the date range. Please check for some other dates");
             }
         } catch (SQLException e) {
             e.printStackTrace();
