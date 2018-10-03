@@ -140,14 +140,10 @@ public class DBUtils {
         preparedStatement.setInt(1, carId);
 
         ResultSet resultSet = preparedStatement.executeQuery();
-        int count = 0;
         while (resultSet.next()) {
-            System.out.println(++count);
             java.util.Date
                     start = convertToUtil(resultSet.getTimestamp(Transaction.START_DATE)),
                     end = convertToUtil(resultSet.getTimestamp(Transaction.END_DATE));
-
-            System.out.println("Util : " + start + " " + end + "\n" + startDate + " " + endDate);
 
             if (startDate.after(start) && endDate.before(end))
                 return false;
@@ -158,7 +154,6 @@ public class DBUtils {
             else if (start.after(startDate) && end.before(endDate))
                 return false;
         }
-        System.out.println("True");
         return true;
     }
 

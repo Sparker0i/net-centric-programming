@@ -51,7 +51,6 @@ public class ViewCarServlet extends HttpServlet {
 		if (carId == null) {
 		    carId = (String) req.getAttribute(Car.CAR_ID);
         }
-        System.out.println("Car : " + carId);
 		Car car = null;
 		String errorString = null;
 
