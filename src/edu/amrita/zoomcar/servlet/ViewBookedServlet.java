@@ -36,13 +36,12 @@ public class ViewBookedServlet extends HttpServlet {
         }
 
         Connection connection = MyUtils.getStoredConnection(request);
-        
+
         String errorString = null;
         List<Transaction> transactions = null;
         try {
-            transactions = DBUtils.getTransactions(connection , loginedUser);
-        }
-        catch (SQLException ex) {
+            transactions = DBUtils.getTransactions(connection, loginedUser);
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
 

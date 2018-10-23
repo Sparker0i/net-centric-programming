@@ -10,8 +10,7 @@
 </head>
 <body>
 
-<jsp:include page="_header.jsp"></jsp:include>
-<jsp:include page="_menu.jsp"></jsp:include>
+<jsp:include page="_top.jsp"/>
 
 <h3>Product List</h3>
 
@@ -34,7 +33,7 @@
     </c:forEach>
 </table>
 
-<jsp:include page="_footer.jsp"></jsp:include>
+<jsp:include page="_footer.jsp"/>
 
 </body>
 </html>

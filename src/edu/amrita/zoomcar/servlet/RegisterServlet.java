@@ -48,7 +48,7 @@ public class RegisterServlet extends HttpServlet {
 
         User user = null;
         try {
-            user = new User(userId , userName , password , gender , email , phone , new SimpleDateFormat("yyyy-mm-dd").parse(dob));
+            user = new User(userId, userName, password, gender, email, phone, new SimpleDateFormat("yyyy-mm-dd").parse(dob));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -60,12 +60,10 @@ public class RegisterServlet extends HttpServlet {
         if (!confirmPassword.equals(password)) {
             hasError = true;
             errorString = "Passwords don't match";
-        }
-        else try {
-            if (DBUtils.findUser(connection , user.getUserId()) == null) {
+        } else try {
+            if (DBUtils.findUser(connection, user.getUserId()) == null) {
 
-            }
-            else {
+            } else {
                 hasError = true;
                 errorString = "Provided User ID already exists";
             }
@@ -81,14 +79,13 @@ public class RegisterServlet extends HttpServlet {
 
             RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/registerView.jsp");
             dispatcher.forward(request, response);
-        }
-        else {
+        } else {
             HttpSession session = request.getSession();
             MyUtils.storeLoggedInUser(session, user);
 
             MyUtils.storeUserCookie(response, user);
             try {
-                DBUtils.insertUser(connection , user);
+                DBUtils.insertUser(connection, user);
             } catch (SQLException e) {
                 e.printStackTrace();
             }

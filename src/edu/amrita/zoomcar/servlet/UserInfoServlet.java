@@ -23,7 +23,7 @@ public class UserInfoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    		throws ServletException, IOException {
+            throws ServletException, IOException {
         HttpSession session = request.getSession();
 
         // Check User has logged on
@@ -41,14 +41,14 @@ public class UserInfoServlet extends HttpServlet {
         // If the user has logged in, then forward to the page
         // /WEB-INF/views/userInfoView.jsp
         RequestDispatcher dispatcher //
-            = this.getServletContext().getRequestDispatcher("/WEB-INF/views/userInfoView.jsp");
+                = this.getServletContext().getRequestDispatcher("/WEB-INF/views/userInfoView.jsp");
         dispatcher.forward(request, response);
 
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         doGet(request, response);
     }
 

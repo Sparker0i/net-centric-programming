@@ -10,8 +10,7 @@
 </head>
 <body>
 
-<jsp:include page="_header.jsp"></jsp:include>
-<jsp:include page="_menu.jsp"></jsp:include>
+<jsp:include page="_top.jsp"/>
 <br>
 Car ID: <b>${car.carId}</b>
 <br/>
@@ -65,7 +64,7 @@ Cost Per Day: <b>${car.costPerDay}</b>
         </tr>
     </table>
 </form>
-<jsp:include page="_footer.jsp"></jsp:include>
+<jsp:include page="_footer.jsp"/>
 
 </body>
 </html>

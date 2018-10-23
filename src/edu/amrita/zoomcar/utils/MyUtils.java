@@ -18,26 +18,26 @@ public class MyUtils {
     public static void storeConnection(ServletRequest request, Connection conn) {
         request.setAttribute(ATT_NAME_CONNECTION, conn);
     }
-    
+
     public static Connection getStoredConnection(ServletRequest request) {
-    	return ((Connection) request.getAttribute(ATT_NAME_CONNECTION));
+        return ((Connection) request.getAttribute(ATT_NAME_CONNECTION));
     }
-    
-    public static void storeLoggedInUser(HttpSession session , User user) {
-    	session.setAttribute(MyUtils.LOGGED_IN , user);
+
+    public static void storeLoggedInUser(HttpSession session, User user) {
+        session.setAttribute(MyUtils.LOGGED_IN, user);
     }
-    
+
     public static User getLoggedUser(HttpSession session) {
         return (User) session.getAttribute(MyUtils.LOGGED_IN);
     }
-    
+
     public static void storeUserCookie(HttpServletResponse response, User user) {
         System.out.println("Store user cookie");
         Cookie cookieUserName = new Cookie(ATT_NAME_USER_ID, user.getUserId());
         cookieUserName.setMaxAge(24 * 60 * 60);
         response.addCookie(cookieUserName);
     }
-    
+
     public static String getUserNameInCookie(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
@@ -49,7 +49,7 @@ public class MyUtils {
         }
         return null;
     }
-    
+
     public static void deleteUserCookie(HttpServletResponse response) {
         Cookie cookieUserName = new Cookie(ATT_NAME_USER_ID, null);
         // 0 seconds (This cookie will expire immediately)

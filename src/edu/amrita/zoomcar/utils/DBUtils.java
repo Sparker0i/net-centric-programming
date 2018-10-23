@@ -25,7 +25,7 @@ public class DBUtils {
         List<Car> list = new ArrayList<>();
         while (resultSet.next()) {
             Car car = new Car();
-            
+
             car.setCarId(resultSet.getInt(Car.CAR_ID));
             car.setCostPerDay(resultSet.getFloat(Car.COST_PER_DAY));
             car.setNumberPlate(resultSet.getString(Car.NUMBER_PLATE));
@@ -45,17 +45,17 @@ public class DBUtils {
         return list;
     }
 
-    public static Car getCar(Connection connection , Integer code) throws SQLException {
-        String SQL = String.format("SELECT * FROM CAR WHERE %s = ?" , Car.CAR_ID);
+    public static Car getCar(Connection connection, Integer code) throws SQLException {
+        String SQL = String.format("SELECT * FROM CAR WHERE %s = ?", Car.CAR_ID);
 
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-        preparedStatement.setInt(1 , code);
+        preparedStatement.setInt(1, code);
 
         ResultSet resultSet = preparedStatement.executeQuery();
 
         while (resultSet.next()) {
             Car car = new Car();
-            
+
             car.setCarId(resultSet.getInt(Car.CAR_ID));
             car.setCostPerDay(resultSet.getFloat(Car.COST_PER_DAY));
             car.setNumberPlate(resultSet.getString(Car.NUMBER_PLATE));
@@ -75,17 +75,17 @@ public class DBUtils {
         return null;
     }
 
-    public static User findUser(Connection connection , String name) throws SQLException {
-    	String SQL = String.format("SELECT * FROM USER WHERE %s = ?" , User.USER_ID);
-    	
-    	PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-        preparedStatement.setString(1 , name);
+    public static User findUser(Connection connection, String name) throws SQLException {
+        String SQL = String.format("SELECT * FROM USER WHERE %s = ?", User.USER_ID);
+
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+        preparedStatement.setString(1, name);
 
         ResultSet resultSet = preparedStatement.executeQuery();
         return sendUser(resultSet);
     }
 
-    private static User sendUser(ResultSet resultSet) throws SQLException{
+    private static User sendUser(ResultSet resultSet) throws SQLException {
         while (resultSet.next()) {
             User user = new User();
             user.setUserId(resultSet.getString(User.USER_ID));
@@ -99,42 +99,42 @@ public class DBUtils {
         }
         return null;
     }
-    
-    public static User findUser(Connection connection , String name , String password) throws SQLException {
-    	String SQL = String.format("SELECT * FROM USER WHERE %s = ? AND %s = ?" , User.USER_ID , User.PASSWORD);
-    	
-    	PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-        preparedStatement.setString(1 , name);
-        preparedStatement.setString(2 , password);
+
+    public static User findUser(Connection connection, String name, String password) throws SQLException {
+        String SQL = String.format("SELECT * FROM USER WHERE %s = ? AND %s = ?", User.USER_ID, User.PASSWORD);
+
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+        preparedStatement.setString(1, name);
+        preparedStatement.setString(2, password);
 
         ResultSet resultSet = preparedStatement.executeQuery();
         return sendUser(resultSet);
     }
-    
-    public static void insertUser(Connection connection , User user) throws SQLException {
-    	String SQL = String.format("INSERT INTO USER(%s , %s , %s , %s , %s , %s , %s) VALUES (? , ? , ? , ? , ? , ? , ?)" ,
-    			User.USER_ID,
-    			User.USER_NAME,
-    			User.PASSWORD,
-    			User.DOB,
-    			User.E_MAIL,
-    			User.GENDER,
-    			User.PHONE);
-    	
-    	PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-    	preparedStatement.setString(1, user.getUserId());
-    	preparedStatement.setString(2, user.getUserName());
-    	preparedStatement.setString(3, user.getPassword());
-    	preparedStatement.setTimestamp(4, convertToSQL(user.getDob()));
-    	preparedStatement.setString(5, user.getEmail());
-    	preparedStatement.setString(6, user.getGender());
-    	preparedStatement.setString(7, user.getPhone());
-    	
-    	preparedStatement.executeUpdate();
+
+    public static void insertUser(Connection connection, User user) throws SQLException {
+        String SQL = String.format("INSERT INTO USER(%s , %s , %s , %s , %s , %s , %s) VALUES (? , ? , ? , ? , ? , ? , ?)",
+                User.USER_ID,
+                User.USER_NAME,
+                User.PASSWORD,
+                User.DOB,
+                User.E_MAIL,
+                User.GENDER,
+                User.PHONE);
+
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+        preparedStatement.setString(1, user.getUserId());
+        preparedStatement.setString(2, user.getUserName());
+        preparedStatement.setString(3, user.getPassword());
+        preparedStatement.setTimestamp(4, convertToSQL(user.getDob()));
+        preparedStatement.setString(5, user.getEmail());
+        preparedStatement.setString(6, user.getGender());
+        preparedStatement.setString(7, user.getPhone());
+
+        preparedStatement.executeUpdate();
     }
 
-    public static boolean checkTransactionForRange(Connection connection , Integer carId , java.util.Date startDate , java.util.Date endDate) throws SQLException {
-        String SQL = String.format("SELECT * FROM TRANSACTION WHERE %s = ?" , Transaction.CAR_ID);
+    public static boolean checkTransactionForRange(Connection connection, Integer carId, java.util.Date startDate, java.util.Date endDate) throws SQLException {
+        String SQL = String.format("SELECT * FROM TRANSACTION WHERE %s = ?", Transaction.CAR_ID);
 
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
         preparedStatement.setInt(1, carId);
@@ -147,9 +147,9 @@ public class DBUtils {
 
             if (startDate.after(start) && endDate.before(end))
                 return false;
-            else if (inBetween(startDate , start , end))
+            else if (inBetween(startDate, start, end))
                 return false;
-            else if (inBetween(endDate , start , end))
+            else if (inBetween(endDate, start, end))
                 return false;
             else if (start.after(startDate) && end.before(endDate))
                 return false;
@@ -157,12 +157,12 @@ public class DBUtils {
         return true;
     }
 
-    private static boolean inBetween(java.util.Date date , java.util.Date start , java.util.Date end) {
+    private static boolean inBetween(java.util.Date date, java.util.Date start, java.util.Date end) {
         return date.after(start) && date.before(end);
     }
 
-    public static void insertTransaction(Connection connection , Transaction transaction) throws SQLException {
-        String SQL = String.format("INSERT INTO TRANSACTION(%s , %s , %s , %s , %s) VALUES (? , ? , ? , ? , ?)" ,
+    public static void insertTransaction(Connection connection, Transaction transaction) throws SQLException {
+        String SQL = String.format("INSERT INTO TRANSACTION(%s , %s , %s , %s , %s) VALUES (? , ? , ? , ? , ?)",
                 Transaction.USER_ID,
                 Transaction.CAR_ID,
                 Transaction.START_DATE,
@@ -171,20 +171,20 @@ public class DBUtils {
 
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
         preparedStatement.setString(1, transaction.getUserId());
-        preparedStatement.setInt(2 , transaction.getCarId());
-        preparedStatement.setTimestamp(3 , convertToSQL(transaction.getStartDate()));
-        preparedStatement.setTimestamp(4 , convertToSQL(transaction.getEndDate()));
-        preparedStatement.setTimestamp(5 , convertToSQL(transaction.getDateOfRequest()));
+        preparedStatement.setInt(2, transaction.getCarId());
+        preparedStatement.setTimestamp(3, convertToSQL(transaction.getStartDate()));
+        preparedStatement.setTimestamp(4, convertToSQL(transaction.getEndDate()));
+        preparedStatement.setTimestamp(5, convertToSQL(transaction.getDateOfRequest()));
 
         preparedStatement.executeUpdate();
     }
 
-    public static List<Transaction> getTransactions(Connection connection , User user) throws SQLException {
-        String SQL = String.format("SELECT * FROM TRANSACTION WHERE %s = ?" ,
+    public static List<Transaction> getTransactions(Connection connection, User user) throws SQLException {
+        String SQL = String.format("SELECT * FROM TRANSACTION WHERE %s = ?",
                 Transaction.USER_ID);
 
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-        preparedStatement.setString(1 , user.getUserId());
+        preparedStatement.setString(1, user.getUserId());
 
         ResultSet resultSet = preparedStatement.executeQuery();
         List<Transaction> transactions = new ArrayList<>();
@@ -200,12 +200,12 @@ public class DBUtils {
         }
         return transactions;
     }
-    
+
     private static Timestamp convertToSQL(java.util.Date date) {
-    	return new Timestamp(date.getTime());
+        return new Timestamp(date.getTime());
     }
-    
+
     private static java.util.Date convertToUtil(Timestamp date) {
-    	return new Date(date.getTime());
+        return new Date(date.getTime());
     }
 }

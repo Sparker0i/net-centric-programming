@@ -5,14 +5,14 @@ import java.util.Date;
 public class Transaction {
     private String userId;
     private Integer carId;
-    private Date startDate , endDate , dateOfRequest;
+    private Date startDate, endDate, dateOfRequest;
 
     public static final String
-        USER_ID = "USER_ID",
-        CAR_ID = "CAR_ID",
-        START_DATE = "START_DATE",
-        END_DATE = "END_DATE",
-        DATE_OF_REQUEST = "DATE_OF_REQUEST";
+            USER_ID = "USER_ID",
+            CAR_ID = "CAR_ID",
+            START_DATE = "START_DATE",
+            END_DATE = "END_DATE",
+            DATE_OF_REQUEST = "DATE_OF_REQUEST";
 
 
     public Transaction(String userId, Integer carId, Date startDate, Date endDate, Date dateOfRequest) {

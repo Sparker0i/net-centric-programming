@@ -20,37 +20,37 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 @WebFilter(filterName = "jdbcFilter", urlPatterns = {"/*"})
-public class JDBCFilter implements Filter{
-	
-	public JDBCFilter() {
-		
-	}
-	
-	@Override
-	public void init(FilterConfig filterConfig) throws ServletException {
-		
-	}
-	
-	@Override
-	public void destroy() {
-		
-	}
-	
-	private boolean needJDBC(HttpServletRequest request) {
+public class JDBCFilter implements Filter {
+
+    public JDBCFilter() {
+
+    }
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+
+    }
+
+    @Override
+    public void destroy() {
+
+    }
+
+    private boolean needJDBC(HttpServletRequest request) {
         System.out.println("JDBC Filter");
-        
+
         String servletPath = request.getServletPath();
         String pathInfo = request.getPathInfo();
- 
+
         String urlPattern = servletPath;
- 
+
         if (pathInfo != null) {
             urlPattern = servletPath + "/*";
         }
- 
+
         Map<String, ? extends ServletRegistration> servletRegistrations = request.getServletContext()
                 .getServletRegistrations();
- 
+
         Collection<? extends ServletRegistration> values = servletRegistrations.values();
         for (ServletRegistration sr : values) {
             Collection<String> mappings = sr.getMappings();
@@ -60,15 +60,14 @@ public class JDBCFilter implements Filter{
         }
         return false;
     }
-	
-	
 
-	@Override
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-			throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		HttpServletRequest req = (HttpServletRequest) request;
-		 
+
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
+        // TODO Auto-generated method stub
+        HttpServletRequest req = (HttpServletRequest) request;
+
         // Only open connections for the special requests.
         // (For example, the path to the servlet, JSP, ..)
         // 
@@ -76,9 +75,9 @@ public class JDBCFilter implements Filter{
         // (For example: image, css, javascript,... )
         // 
         if (this.needJDBC(req)) {
- 
+
             System.out.println("Open Connection for: " + req.getServletPath());
- 
+
             Connection conn = null;
             try {
                 // Create a Connection.
@@ -87,7 +86,7 @@ public class JDBCFilter implements Filter{
 
                 MyUtils.storeConnection(request, conn);
                 chain.doFilter(request, response);
- 
+
                 // Invoke the commit() method to complete the transaction with the DB.
                 conn.commit();
             } catch (Exception e) {
@@ -97,10 +96,9 @@ public class JDBCFilter implements Filter{
             } finally {
                 DatabaseConnection.disconnect();
             }
-        }
-        else {
+        } else {
             chain.doFilter(request, response);
         }
-	}
-	
+    }
+
 }

@@ -18,77 +18,73 @@ import edu.amrita.zoomcar.utils.MyUtils;
 
 @WebServlet(urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public LoginServlet() {
-	    super();
-	}
+    public LoginServlet() {
+        super();
+    }
 
-	// Show Login page.
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
+    // Show Login page.
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
-		dispatcher.forward(request, response);
-	}
+        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
+        dispatcher.forward(request, response);
+    }
 
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-	    String userName = request.getParameter("userName");
-	    String password = request.getParameter("password");
-	    String rememberMeStr = request.getParameter("rememberMe");
-	    boolean remember = "Y".equals(rememberMeStr);
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String userName = request.getParameter("userName");
+        String password = request.getParameter("password");
+        String rememberMeStr = request.getParameter("rememberMe");
+        boolean remember = "Y".equals(rememberMeStr);
 
-	    User user = null;
-	    boolean hasError = false;
-	    String errorString = null;
+        User user = null;
+        boolean hasError = false;
+        String errorString = null;
 
-	    if (userName == null || password == null || userName.length() == 0 || password.length() == 0) {
-	        hasError = true;
-	        errorString = "Required username and password!";
-	    } 
-	    else {
-	        Connection conn = MyUtils.getStoredConnection(request);
-	        try {
-		        user = DBUtils.findUser(conn, userName, password);
-		        if (user == null) {
-	                hasError = true;
-	                errorString = "User Name or password invalid";
-	            }
-	        } 
-	        catch (SQLException e) {
-	            e.printStackTrace();
-	            hasError = true;
-	            errorString = e.getMessage();
-	        }
-	    }
-	    if (hasError) {
-	        user = new User();
-	        user.setUserId(userName);
-	        user.setPassword(password);
+        if (userName == null || password == null || userName.length() == 0 || password.length() == 0) {
+            hasError = true;
+            errorString = "Required username and password!";
+        } else {
+            Connection conn = MyUtils.getStoredConnection(request);
+            try {
+                user = DBUtils.findUser(conn, userName, password);
+                if (user == null) {
+                    hasError = true;
+                    errorString = "User Name or password invalid";
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                hasError = true;
+                errorString = e.getMessage();
+            }
+        }
+        if (hasError) {
+            user = new User();
+            user.setUserId(userName);
+            user.setPassword(password);
 
-	            // Store information in request attribute, before forward.
-	        request.setAttribute("errorString", errorString);
-	        request.setAttribute("user", user);
+            // Store information in request attribute, before forward.
+            request.setAttribute("errorString", errorString);
+            request.setAttribute("user", user);
 
-	            // Forward to /WEB-INF/views/login.jsp
-	        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
-	        dispatcher.forward(request, response);
-	    }
-	    else {
-	        HttpSession session = request.getSession();
-	        MyUtils.storeLoggedInUser(session, user);
+            // Forward to /WEB-INF/views/login.jsp
+            RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
+            dispatcher.forward(request, response);
+        } else {
+            HttpSession session = request.getSession();
+            MyUtils.storeLoggedInUser(session, user);
 
-	        if (remember) {
-	            MyUtils.storeUserCookie(response, user);
-	        }
-	        else {
-	            MyUtils.deleteUserCookie(response);
-	        }
+            if (remember) {
+                MyUtils.storeUserCookie(response, user);
+            } else {
+                MyUtils.deleteUserCookie(response);
+            }
 
-	        response.sendRedirect(request.getContextPath() + "/");
-	    }
-	}
+            response.sendRedirect(request.getContextPath() + "/");
+        }
+    }
 }

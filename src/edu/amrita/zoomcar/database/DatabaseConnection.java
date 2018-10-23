@@ -28,8 +28,7 @@ public class DatabaseConnection {
 
             USER = (String) credentials.get("username");
             PASS = (String) credentials.get("password");
-        }
-        catch (IOException | ParseException ex) {
+        } catch (IOException | ParseException ex) {
             ex.printStackTrace();
         }
     }
@@ -45,8 +44,7 @@ public class DatabaseConnection {
                 ex.printStackTrace();
             }
             return connection;
-        }
-        else
+        } else
             return connection;
     }
 
@@ -70,13 +68,12 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
     }
-    
+
     public static void rollback() {
-    	try {
-    		connection.rollback();
-    	}
-    	catch (Exception e) {
-    		e.printStackTrace();
-    	}
+        try {
+            connection.rollback();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

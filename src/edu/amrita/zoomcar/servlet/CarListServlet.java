@@ -28,9 +28,9 @@ public class CarListServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    		throws ServletException, IOException {
-    	HttpSession session = request.getSession();
-		User loginedUser = MyUtils.getLoggedUser(session);
+            throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        User loginedUser = MyUtils.getLoggedUser(session);
 
         // Not logged in
         if (loginedUser == null) {
@@ -38,15 +38,14 @@ public class CarListServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
-        
+
         Connection conn = MyUtils.getStoredConnection(request);
 
         String errorString = null;
         List<Car> list = null;
         try {
             list = DBUtils.getCars(conn);
-        } 
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             errorString = e.getMessage();
         }
@@ -56,13 +55,13 @@ public class CarListServlet extends HttpServlet {
 
         // Forward to /WEB-INF/views/productListView.jsp
         RequestDispatcher dispatcher = request.getServletContext()
-            .getRequestDispatcher("/WEB-INF/views/carListView.jsp");
+                .getRequestDispatcher("/WEB-INF/views/carListView.jsp");
         dispatcher.forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         doGet(request, response);
     }
 }

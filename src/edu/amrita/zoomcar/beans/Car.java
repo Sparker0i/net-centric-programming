@@ -2,9 +2,9 @@ package edu.amrita.zoomcar.beans;
 
 public class Car {
     private Integer carId;
-    private Float costPerDay , price;
-    private String carName , numberPlate , company , model , version , color, fuelType, carType , gearType , features;
-    private Boolean ac , leatherSeats , sunroof;
+    private Float costPerDay, price;
+    private String carName, numberPlate, company, model, version, color, fuelType, carType, gearType, features;
+    private Boolean ac, leatherSeats, sunroof;
 
     public static final String
             CAR_ID = "CAR_ID",
@@ -23,25 +23,25 @@ public class Car {
             LEATHER_SEATS = "LEATHER_SEATS",
             SUNROOF = "SUNROOF",
             FEATURES = "FEATURES";
-    
+
     public Car() {
-    	
+
     }
-    
-    public Car(Integer carId , String numberPlate , String company , String model , String version , String color, String fuelType , String gearType , Boolean ac , Boolean leatherSeats , Boolean sunroof , String carType , Float costPerDay) {
-    	this.carId = carId;
-    	this.numberPlate = numberPlate;
-    	this.company = company;
-    	this.model = model;
-    	this.version = version;
-    	this.color = color;
-    	this.fuelType = fuelType;
-    	this.gearType = gearType;
-    	this.ac = ac;
-    	this.leatherSeats = leatherSeats;
-    	this.sunroof = sunroof;
-    	this.carType = carType;
-    	this.costPerDay = costPerDay;
+
+    public Car(Integer carId, String numberPlate, String company, String model, String version, String color, String fuelType, String gearType, Boolean ac, Boolean leatherSeats, Boolean sunroof, String carType, Float costPerDay) {
+        this.carId = carId;
+        this.numberPlate = numberPlate;
+        this.company = company;
+        this.model = model;
+        this.version = version;
+        this.color = color;
+        this.fuelType = fuelType;
+        this.gearType = gearType;
+        this.ac = ac;
+        this.leatherSeats = leatherSeats;
+        this.sunroof = sunroof;
+        this.carType = carType;
+        this.costPerDay = costPerDay;
     }
 
     public Integer getCarId() {
@@ -148,27 +148,27 @@ public class Car {
         this.sunroof = sunroof;
     }
 
-	public String getFeatures() {
-		return features;
-	}
+    public String getFeatures() {
+        return features;
+    }
 
-	public void setFeatures(String features) {
-		this.features = features;
-	}
+    public void setFeatures(String features) {
+        this.features = features;
+    }
 
-	public String getCarName() {
-		return carName;
-	}
+    public String getCarName() {
+        return carName;
+    }
 
-	public void setCarName(String carName) {
-		this.carName = carName;
-	}
+    public void setCarName(String carName) {
+        this.carName = carName;
+    }
 
-	public Float getPrice() {
-		return price;
-	}
+    public Float getPrice() {
+        return price;
+    }
 
-	public void setPrice(Float price) {
-		this.price = price;
-	}
+    public void setPrice(Float price) {
+        this.price = price;
+    }
 }

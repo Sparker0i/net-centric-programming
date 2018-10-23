@@ -7,8 +7,7 @@
       <title>Login</title>
    </head>
    <body>
-      <jsp:include page="_header.jsp"></jsp:include>
-      <jsp:include page="_menu.jsp"></jsp:include>
+   <jsp:include page="_top.jsp"/>
  
       <h3>Login Page</h3>
       <p style="color: red;">${errorString}</p>
@@ -37,6 +36,6 @@
          </table>
       </form>
  
-      <jsp:include page="_footer.jsp"></jsp:include>
+      <jsp:include page="_footer.jsp"/>
    </body>
 </html>
