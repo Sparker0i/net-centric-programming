@@ -5,9 +5,9 @@
   <div style="float: left">
      <h1>ZoomCar</h1>
   </div>
- 
+
   <div style="float: right; padding: 10px; text-align: right;">
- 
+
      <!-- User store in session with attribute: loggedInUser -->
       <c:choose>
           <c:when test="${loggedInUser != null}">
@@ -20,5 +20,5 @@
           </c:otherwise>
       </c:choose>
   </div>
- 
+
 </div>

@@ -5,12 +5,11 @@
 <html>
  <head>
     <meta charset="UTF-8">
-    <title>Product List</title>
+    <title>Car List</title>
  </head>
  <body>
- 
-    <jsp:include page="_header.jsp"></jsp:include>
-    <jsp:include page="_menu.jsp"></jsp:include>
+
+    <jsp:include page="_top.jsp"/>
  
     <h3>Car List</h3>
  
