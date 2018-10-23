@@ -14,7 +14,7 @@
     CREATE TABLE CAR(    
         CAR_ID INTEGER PRIMARY KEY,  
         COST_PER_DAY FLOAT,        
-        NUMBERPLATE TEXT,          
+        NUMBER_PLATE TEXT,          
         COMPANY TEXT,          
         MODEL TEXT,          
         VERSION TEXT,          
