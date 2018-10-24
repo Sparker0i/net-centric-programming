@@ -98,7 +98,10 @@ public class ViewCarServlet extends HttpServlet {
         Connection connection = MyUtils.getStoredConnection(req);
         PrintWriter out = resp.getWriter();
         try {
-            if (DBUtils.checkTransactionForRange(connection, Integer.parseInt(carId), from, to)) {
+            if (from == null || to == null) {
+                alert(out, "Please Enter Date Range");
+            }
+            else if (DBUtils.checkTransactionForRange(connection, Integer.parseInt(carId), from, to)) {
                 DBUtils.insertTransaction(connection, new Transaction(user.getUserId(), Integer.parseInt(carId), from, to, request));
                 alert(out, "Success");
             } else {
