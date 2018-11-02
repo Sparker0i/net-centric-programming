@@ -2,15 +2,13 @@ package edu.amrita.zoomcar.beans;
 
 public class Car {
     private Integer carId;
-    private Float costPerDay, price;
-    private String carName, numberPlate, company, model, version, color, fuelType, carType, gearType, features;
+    private Float costPerDay;
+    private String numberPlate, company, model, version, color, fuelType, carType, gearType;
     private Boolean ac, leatherSeats, sunroof;
 
     public static final String
             CAR_ID = "CAR_ID",
-            CAR_NAME = "NAME",
             COST_PER_DAY = "COST_PER_DAY",
-            PRICE = "PRICE",
             NUMBER_PLATE = "NUMBER_PLATE",
             COMPANY = "COMPANY",
             MODEL = "MODEL",
@@ -21,8 +19,7 @@ public class Car {
             GEAR_TYPE = "GEAR_TYPE",
             AC = "AC",
             LEATHER_SEATS = "LEATHER_SEATS",
-            SUNROOF = "SUNROOF",
-            FEATURES = "FEATURES";
+            SUNROOF = "SUNROOF";
 
     public Car() {
 
@@ -146,29 +143,5 @@ public class Car {
 
     public void setSunroof(Boolean sunroof) {
         this.sunroof = sunroof;
-    }
-
-    public String getFeatures() {
-        return features;
-    }
-
-    public void setFeatures(String features) {
-        this.features = features;
-    }
-
-    public String getCarName() {
-        return carName;
-    }
-
-    public void setCarName(String carName) {
-        this.carName = carName;
-    }
-
-    public Float getPrice() {
-        return price;
-    }
-
-    public void setPrice(Float price) {
-        this.price = price;
     }
 }

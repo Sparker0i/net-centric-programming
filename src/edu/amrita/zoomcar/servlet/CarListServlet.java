@@ -3,7 +3,6 @@ package edu.amrita.zoomcar.servlet;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -91,24 +90,25 @@ public class CarListServlet extends HttpServlet {
             errorString = e.getMessage();
         }
 
-        System.out.println(list.size());
+        if (list != null) {
+            System.out.println(list.size());
 
-        Iterator<Car> iter = list.iterator();
-        while (iter.hasNext()) {
-            Car car = iter.next();
-            System.out.println(car.getCarName() + " " + car.getPrice());
-            if (minPrice != null)
-                if (car.getCostPerDay() < minPrice) {
-                    System.out.println(car.getCarName());
-                    iter.remove();
+            Iterator<Car> iter = list.iterator();
+            while (iter.hasNext()) {
+                Car car = iter.next();
+                if (minPrice != null) {
+                    if (car.getCostPerDay() < minPrice) {
+                        iter.remove();
+                    }
                 }
-            else if (maxPrice != null)
-                if (car.getCostPerDay() > maxPrice) {
-                    System.out.println(car.getCarName());
-                    iter.remove();
+                else if (maxPrice != null) {
+                    if (car.getCostPerDay() > maxPrice) {
+                        iter.remove();
+                    }
                 }
+            }
+            System.out.println(list.size());
         }
-        System.out.println(list.size());
 
         request.setAttribute("errorString", errorString);
         request.setAttribute("productList", list);

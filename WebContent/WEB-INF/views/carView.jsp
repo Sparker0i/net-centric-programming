@@ -13,37 +13,37 @@
 <jsp:include page="_top.jsp"/>
 <br/>
 <br/>
-Number Plate: <b>${car.numberPlate}</b>
+Number Plate: <b>${car.getNumberPlate()}</b>
 <br/>
-Car: <b>${car.company} ${car.model} - ${car.version}</b>
+Car: <b>${car.getCompany()} ${car.getModel()} - ${car.getVersion()}</b>
 <br/>
-Color: <b>${car.color}</b>
+Color: <b>${car.getColor()}</b>
 <br/>
-Fuel Type: <b>${car.fuelType}</b>
+Fuel Type: <b>${car.getFuelType()}</b>
 <br/>
-Gear Type: <b>${car.gearType}</b>
+Gear Type: <b>${car.getGearType()}</b>
 <br/>
 Has AC:
 <c:choose>
-    <c:when test='${car.ac}'><b>Yes</b></c:when>
+    <c:when test='${car.getAc()}'><b>Yes</b></c:when>
     <c:otherwise><b>No</b></c:otherwise>
 </c:choose>
 <br/>
 Has Leather Seats:
 <c:choose>
-    <c:when test='${car.leatherSeats}'><b>Yes</b></c:when>
+    <c:when test='${car.getLeatherSeats()}'><b>Yes</b></c:when>
     <c:otherwise><b>No</b></c:otherwise>
 </c:choose>
 <br/>
 Has Sunroof:
 <c:choose>
-    <c:when test='${car.sunroof}'><b>Yes</b></c:when>
+    <c:when test='${car.getSunroof()}'><b>Yes</b></c:when>
     <c:otherwise><b>No</b></c:otherwise>
 </c:choose>
 <br/>
-Car Type: <b>${car.carType}</b>
+Car Type: <b>${car.getCarType()}</b>
 <br/>
-Cost Per Day: <b>${car.costPerDay}</b>
+Cost Per Day: <b>${car.getCostPerDay()}</b>
 <br/>
 
 <p style="color: red;">${errorString}</p>
