@@ -17,11 +17,11 @@
          <table border="0">
             <tr>
                <td>User ID</td>
-               <td><input type="text" name="userName" value= "${user.userId}" /> </td>
+               <td><input type="text" name="userName" value= "${user.getUserId()}" /> </td>
             </tr>
             <tr>
                <td>Password</td>
-               <td><input type="password" name="password" value= "${user.password}" /> </td>
+               <td><input type="password" name="password" value= "${user.getPassword()}" /> </td>
             </tr>
             <tr>
                <td>Remember me</td>

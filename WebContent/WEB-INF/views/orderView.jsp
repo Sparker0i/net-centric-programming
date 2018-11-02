@@ -25,10 +25,10 @@
     </tr>
     <c:forEach items="${transactions}" var="transaction" >
         <tr>
-            <td><a href="viewCar?CAR_ID=${transaction.carId}">${transaction.carId}</a></td>
-            <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.startDate}" /></td>
-            <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.endDate}" /></td>
-            <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.dateOfRequest}" /></td>
+            <td><a href="viewCar?CAR_ID=${transaction.getCarId()}">${transaction.carId}</a></td>
+            <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.getStartDate()}" /></td>
+            <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.getEndDate()}" /></td>
+            <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.getDateOfRequest()}" /></td>
         </tr>
     </c:forEach>
 </table>

@@ -30,10 +30,10 @@
     </tr>
     <c:forEach items="${productList}" var="product">
         <tr>
-            <td>${product.company} ${product.model}</td>
-            <td>${product.costPerDay}</td>
-            <td>${product.fuelType}</td>
-            <td><a href="viewCar?CAR_ID=${product.carId}">Book Now</a></td>
+            <td>${product.getCompany()} ${product.getModel()}</td>
+            <td>${product.getCostPerDay()}</td>
+            <td>${product.getFuelType()}</td>
+            <td><a href="viewCar?CAR_ID=${product.getCarId()}">Book Now</a></td>
         </tr>
     </c:forEach>
 </table>

@@ -11,20 +11,20 @@
 
  <jsp:include page="_top.jsp"/>
  
-    <h3>Hello: ${user.userId}</h3>
+    <h3>Hello: ${user.getUserId()}</h3>
  
-    User ID: <b>${user.userId}</b>
+    User ID: <b>${user.getUserId()}</b>
     <br />
- 	User Name: <b>${user.userName}</b>
+ 	User Name: <b>${user.getUserName()}</b>
     <br />
-    Gender: <b>${user.gender}</b>
+    Gender: <b>${user.getGender()}</b>
     <br />
     DOB: <b><fmt:formatDate pattern = "dd MMM yyyy" 
-         value = "${user.dob}" /></b>
+         value = "${user.getDob()}" /></b>
     <br />
-    Email: <b>${user.email}</b>
+    Email: <b>${user.getEmail()}</b>
     <br />
-    Phone: <b>${user.phone}</b>
+    Phone: <b>${user.getPhone()}</b>
     <br />
     <jsp:include page="_footer.jsp"/>
  
