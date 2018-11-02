@@ -13,8 +13,6 @@
 <jsp:include page="_top.jsp"/>
 <br/>
 <br/>
-Car ID: <b>${car.carId}</b>
-<br/>
 Number Plate: <b>${car.numberPlate}</b>
 <br/>
 Car: <b>${car.company} ${car.model} - ${car.version}</b>

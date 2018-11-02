@@ -3,6 +3,8 @@ package edu.amrita.zoomcar.servlet;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -62,6 +64,57 @@ public class CarListServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doGet(request, response);
+        Integer minPrice , maxPrice;
+        try {
+            minPrice = Integer.parseInt(request.getParameter("minPrice"));
+        }
+        catch (Exception ex) {
+            minPrice = null;
+        }
+
+        try {
+            maxPrice = Integer.parseInt(request.getParameter("maxPrice"));
+        }
+        catch (Exception ex) {
+            maxPrice = null;
+        }
+        System.out.println(minPrice + " " + maxPrice);
+
+        Connection conn = MyUtils.getStoredConnection(request);
+
+        String errorString = null;
+        List<Car> list = null;
+        try {
+            list = DBUtils.getCars(conn);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            errorString = e.getMessage();
+        }
+
+        System.out.println(list.size());
+
+        Iterator<Car> iter = list.iterator();
+        while (iter.hasNext()) {
+            Car car = iter.next();
+            System.out.println(car.getCarName() + " " + car.getPrice());
+            if (minPrice != null)
+                if (car.getCostPerDay() < minPrice) {
+                    System.out.println(car.getCarName());
+                    iter.remove();
+                }
+            else if (maxPrice != null)
+                if (car.getCostPerDay() > maxPrice) {
+                    System.out.println(car.getCarName());
+                    iter.remove();
+                }
+        }
+        System.out.println(list.size());
+
+        request.setAttribute("errorString", errorString);
+        request.setAttribute("productList", list);
+
+        RequestDispatcher dispatcher = request.getServletContext()
+                .getRequestDispatcher("/WEB-INF/views/carListView.jsp");
+        dispatcher.forward(request, response);
     }
 }
