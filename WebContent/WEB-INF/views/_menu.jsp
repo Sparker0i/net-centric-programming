@@ -15,7 +15,7 @@
         <ul class="nav navbar-nav navbar-right">
             <c:choose>
                 <c:when test="${loggedInUser != null}">
-                    <li><a href="">Hello, <b>${loggedInUser.userName}</b></a></li>
+                    <li><a href="#">Hello, <b>${loggedInUser.userName}</b></a></li>
                     <li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
                 </c:when>
                 <c:otherwise>

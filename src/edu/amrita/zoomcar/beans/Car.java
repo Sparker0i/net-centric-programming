@@ -8,7 +8,7 @@ public class Car {
 
     public static final String
             CAR_ID = "CAR_ID",
-            IMAGE_URL = "IMAGE_URL",
+            IMAGE_URL = "IMG_URL",
             COST_PER_DAY = "COST_PER_DAY",
             NUMBER_PLATE = "NUMBER_PLATE",
             COMPANY = "COMPANY",

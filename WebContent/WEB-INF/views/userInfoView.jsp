@@ -4,7 +4,9 @@
 <!DOCTYPE html>
 <html>
  <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <title>User Info</title>
  </head>
  <body>
