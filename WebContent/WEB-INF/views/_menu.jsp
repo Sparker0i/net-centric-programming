@@ -22,7 +22,6 @@
                     <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
                 </c:otherwise>
             </c:choose>
-            </li>
         </ul>
     </div>
 </nav>

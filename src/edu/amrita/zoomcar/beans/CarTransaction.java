@@ -3,10 +3,10 @@ package edu.amrita.zoomcar.beans;
 import java.util.Date;
 
 public class CarTransaction {
-    public String company, model, version, userId;
-    public Integer carId;
-    public Date dateOfRequest, startDate, endDate;
-    public Double cost;
+    private String company, model, version, userId;
+    private Integer carId;
+    private Date dateOfRequest, startDate, endDate;
+    private Double cost,  costPerDay;
 
     public Double getCostPerDay() {
         return costPerDay;
@@ -15,8 +15,6 @@ public class CarTransaction {
     public void setCostPerDay(Double costPerDay) {
         this.costPerDay = costPerDay;
     }
-
-    public Double costPerDay;
 
     public static final String
             COMPANY = "CAR.COMPANY",
