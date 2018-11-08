@@ -48,6 +48,8 @@ Car Type: <b>${car.getCarType()}</b>
 Cost Per Day: <b>${car.getCostPerDay()}</b>
 <br/>
 
+<img src="${car.getImageUrl()}">
+
 <p style="color: red;">${errorString}</p>
 
 <form method="POST" action="${pageContext.request.contextPath}/viewCar">
