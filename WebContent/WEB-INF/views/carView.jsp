@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<jsp:include page="_top.jsp"/>
+<jsp:include page="_menu.jsp"/>
 <br/>
 <br/>
 Number Plate: <b>${car.getNumberPlate()}</b>

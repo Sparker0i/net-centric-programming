@@ -15,7 +15,7 @@
     <title>Login</title>
 </head>
 <body>
-<jsp:include page="_top.jsp"/>
+<jsp:include page="_menu.jsp"/>
 
 <div class="container">
 <h3>Register User</h3>

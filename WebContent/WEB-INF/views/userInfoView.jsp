@@ -9,7 +9,7 @@
  </head>
  <body>
 
- <jsp:include page="_top.jsp"/>
+ <jsp:include page="_menu.jsp"/>
  
     <h3>Hello: ${user.getUserId()}</h3>
  

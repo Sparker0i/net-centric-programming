@@ -9,7 +9,7 @@
       <title>Login</title>
    </head>
    <body>
-   <jsp:include page="_top.jsp"/>
+   <jsp:include page="_menu.jsp"/>
  <div class="container">
       <h3>Login Page</h3>
       <p style="color: red;">${errorString}</p>

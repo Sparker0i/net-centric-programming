@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<jsp:include page="_top.jsp"/>
+<jsp:include page="_menu.jsp"/>
 
 <h3>Product List</h3>
 
