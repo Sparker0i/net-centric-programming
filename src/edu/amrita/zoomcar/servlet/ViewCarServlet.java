@@ -101,6 +101,9 @@ public class ViewCarServlet extends HttpServlet {
             if (from == null || to == null) {
                 alert(out, "Please Enter Date Range");
             }
+            else if (from.compareTo(to) > 0) {
+                alert(out, "From Data Cannot be greater than To date");
+            }
             else if (DBUtils.checkTransactionForRange(connection, Integer.parseInt(carId), from, to)) {
                 DBUtils.insertTransaction(connection, new Transaction(user.getUserId(), Integer.parseInt(carId), from, to, request));
                 alert(out, "Success");

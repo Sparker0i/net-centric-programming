@@ -63,16 +63,16 @@ public class CarListServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Integer minPrice , maxPrice;
+        Float minPrice , maxPrice;
         try {
-            minPrice = Integer.parseInt(request.getParameter("minPrice"));
+            minPrice = Float.parseFloat(request.getParameter("minPrice"));
         }
         catch (Exception ex) {
             minPrice = null;
         }
 
         try {
-            maxPrice = Integer.parseInt(request.getParameter("maxPrice"));
+            maxPrice = Float.parseFloat(request.getParameter("maxPrice"));
         }
         catch (Exception ex) {
             maxPrice = null;
@@ -90,18 +90,28 @@ public class CarListServlet extends HttpServlet {
             errorString = e.getMessage();
         }
 
+        if (minPrice != null && maxPrice != null) {
+            if (maxPrice < minPrice) {
+                errorString = "";
+            }
+        }
+
         if (list != null) {
             System.out.println(list.size());
 
             Iterator<Car> iter = list.iterator();
             while (iter.hasNext()) {
                 Car car = iter.next();
+
                 if (minPrice != null) {
+                    //System.out.println("Min is not null");
                     if (car.getCostPerDay() < minPrice) {
                         iter.remove();
+                        continue;
                     }
                 }
-                else if (maxPrice != null) {
+                if (maxPrice != null) {
+                    //System.out.println("Max is not null");
                     if (car.getCostPerDay() > maxPrice) {
                         iter.remove();
                     }
