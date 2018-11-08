@@ -45,6 +45,7 @@ public class RegisterServlet extends HttpServlet {
         String dob = request.getParameter("dob");
         String gender = request.getParameter("gender");
         String phone = request.getParameter("phone");
+        System.out.println(dob);
 
         User user = null;
         try {

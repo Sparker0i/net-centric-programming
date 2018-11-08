@@ -22,52 +22,63 @@
 <p style="color: red;">${errorString}</p>
 
 
-<form method="POST" action="${pageContext.request.contextPath}/register">
-    <table border="0">
-        <tr>
-            <td>User ID</td>
-            <td><input type="text" name="userId" title="User ID" /> </td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="password" name="password" title="Password" /> </td>
-        </tr>
-        <tr>
-            <td>Confirm Password</td>
-            <td><input type="password" name="confirmPassword" title="Confirm Password" /> </td>
-        </tr>
-        <tr>
-            <td>User Name</td>
-            <td><input type="text" name="userName" title="User Name" /> </td>
-        </tr>
-        <tr>
-            <td>Gender</td>
-            <td>
-                <select name="gender" id="gender">
-                    <option value="0" selected>--Select--</option>
-                    <option value="M">Male</option>
-                    <option value="F">Female</option>
+<form class="form-horizontal" method="POST" action="${pageContext.request.contextPath}/register">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="userId">User ID:</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="userId" placeholder="User ID" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="password">Password:</label>
+            <div class="col-sm-3">
+                <input type="password" class="form-control" id="password" placeholder="Password" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="confirmPassword">Confirm Password:</label>
+            <div class="col-sm-3">
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="userName">User Name:</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="userName" placeholder="User Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="gender">Gender:</label>
+            <div class="col-sm-2">
+                <select class="form-control" id="gender">
+                    <option>Male</option>
+                    <option>Female</option>
                 </select>
-            </td>
-        </tr>
-        <tr>
-            <td>DOB</td>
-            <td><input type="date" name="dob" title="Date of Birth" /> </td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input type="text" name="email" title="Email Address" /> </td>
-        </tr>
-        <tr>
-            <td>Phone</td>
-            <td><input type="text" name="phone" title="Phone Number" /> </td>
-        </tr>
-        <tr>
-            <td colspan ="2">
-                <input type="submit" value= "Submit" />
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="dob">DOB:</label>
+            <div class="col-sm-3">
+                <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="email" placeholder="Email Address">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="phone">Phone:</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
 </form>
 </div>
 
