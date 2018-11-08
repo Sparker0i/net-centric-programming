@@ -1,5 +1,6 @@
 package edu.amrita.zoomcar.servlet;
 
+import edu.amrita.zoomcar.beans.CarTransaction;
 import edu.amrita.zoomcar.beans.Transaction;
 import edu.amrita.zoomcar.beans.User;
 import edu.amrita.zoomcar.utils.DBUtils;
@@ -38,7 +39,7 @@ public class ViewBookedServlet extends HttpServlet {
         Connection connection = MyUtils.getStoredConnection(request);
 
         String errorString = null;
-        List<Transaction> transactions = null;
+        List<CarTransaction> transactions = null;
         try {
             transactions = DBUtils.getTransactions(connection, loginedUser);
         } catch (SQLException ex) {

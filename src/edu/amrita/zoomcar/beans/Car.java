@@ -3,11 +3,12 @@ package edu.amrita.zoomcar.beans;
 public class Car {
     private Integer carId;
     private Float costPerDay;
-    private String numberPlate, company, model, version, color, fuelType, carType, gearType;
+    private String numberPlate, company, model, version, color, fuelType, carType, gearType, imageUrl;
     private Boolean ac, leatherSeats, sunroof;
 
     public static final String
             CAR_ID = "CAR_ID",
+            IMAGE_URL = "IMAGE_URL",
             COST_PER_DAY = "COST_PER_DAY",
             NUMBER_PLATE = "NUMBER_PLATE",
             COMPANY = "COMPANY",
@@ -143,5 +144,13 @@ public class Car {
 
     public void setSunroof(Boolean sunroof) {
         this.sunroof = sunroof;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

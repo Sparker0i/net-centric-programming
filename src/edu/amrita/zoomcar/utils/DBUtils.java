@@ -6,13 +6,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import edu.amrita.zoomcar.beans.Car;
+import edu.amrita.zoomcar.beans.CarTransaction;
 import edu.amrita.zoomcar.beans.Transaction;
 import edu.amrita.zoomcar.beans.User;
 
@@ -27,6 +25,7 @@ public class DBUtils {
             Car car = new Car();
 
             car.setCarId(resultSet.getInt(Car.CAR_ID));
+            car.setImageUrl(resultSet.getString(Car.IMAGE_URL));
             car.setCostPerDay(resultSet.getFloat(Car.COST_PER_DAY));
             car.setNumberPlate(resultSet.getString(Car.NUMBER_PLATE));
             car.setAc(resultSet.getBoolean(Car.AC));
@@ -58,6 +57,7 @@ public class DBUtils {
 
             car.setCarId(resultSet.getInt(Car.CAR_ID));
             car.setCostPerDay(resultSet.getFloat(Car.COST_PER_DAY));
+            car.setImageUrl(resultSet.getString(Car.IMAGE_URL));
             car.setNumberPlate(resultSet.getString(Car.NUMBER_PLATE));
             car.setAc(resultSet.getBoolean(Car.AC));
             car.setCarType(resultSet.getString(Car.CAR_TYPE));
@@ -179,7 +179,7 @@ public class DBUtils {
         preparedStatement.executeUpdate();
     }
 
-    public static List<Transaction> getTransactions(Connection connection, User user) throws SQLException {
+    public static List<CarTransaction> getTransactions(Connection connection, User user) throws SQLException {
         String SQL = String.format("SELECT * FROM TRANSACTION WHERE %s = ?",
                 Transaction.USER_ID);
 
@@ -187,9 +187,9 @@ public class DBUtils {
         preparedStatement.setString(1, user.getUserId());
 
         ResultSet resultSet = preparedStatement.executeQuery();
-        List<Transaction> transactions = new ArrayList<>();
+        List<CarTransaction> transactions = new ArrayList<>();
         while (resultSet.next()) {
-            Transaction transaction = new Transaction();
+            CarTransaction transaction = new CarTransaction();
             transaction.setCarId(resultSet.getInt(Transaction.CAR_ID));
             transaction.setDateOfRequest(convertToUtil(resultSet.getTimestamp(Transaction.DATE_OF_REQUEST)));
             transaction.setStartDate(convertToUtil(resultSet.getTimestamp(Transaction.START_DATE)));

@@ -12,7 +12,8 @@
     );
     
     CREATE TABLE CAR(    
-        CAR_ID INTEGER PRIMARY KEY,  
+        CAR_ID INTEGER PRIMARY KEY, 
+        IMG_URL TEXT, 
         COST_PER_DAY FLOAT,        
         NUMBER_PLATE TEXT,          
         COMPANY TEXT,          
