@@ -8,9 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9514751a-7730-4131-ac6c-57cb8e1995df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/userInfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/userInfoView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/Car.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +49,7 @@
           <entry key="html" value="4" />
           <entry key="java" value="74" />
           <entry key="json" value="2" />
-          <entry key="jsp" value="55" />
+          <entry key="jsp" value="56" />
           <entry key="md" value="7" />
           <entry key="project" value="1" />
           <entry key="xml" value="7" />
@@ -63,7 +62,7 @@
           <entry key="HTML" value="4" />
           <entry key="JAVA" value="74" />
           <entry key="JSON" value="2" />
-          <entry key="JSP" value="55" />
+          <entry key="JSP" value="56" />
           <entry key="Manifest" value="1" />
           <entry key="Markdown" value="7" />
           <entry key="PLAIN_TEXT" value="4" />
@@ -75,7 +74,7 @@
           <entry key="gitignore" value="38" />
           <entry key="java" value="3360" />
           <entry key="json" value="41" />
-          <entry key="jsp" value="1450" />
+          <entry key="jsp" value="1631" />
           <entry key="md" value="41" />
         </counts>
       </usages-collector>
@@ -83,7 +82,7 @@
         <counts>
           <entry key="JAVA" value="3360" />
           <entry key="JSON" value="41" />
-          <entry key="JSP" value="1450" />
+          <entry key="JSP" value="1631" />
           <entry key="Markdown" value="41" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
@@ -199,6 +198,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -210,8 +218,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            <state relative-caret-position="135">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -220,25 +228,19 @@
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/userInfoView.jsp">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="95" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
+            <state relative-caret-position="355">
+              <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -293,7 +295,6 @@
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/ViewBookedServlet.java" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/loginView.jsp" />
         <option value="$PROJECT_DIR$/DB.md" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/CarTransaction.java" />
@@ -301,9 +302,10 @@
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/Car.java" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/userInfoView.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp" />
       </list>
     </option>
   </component>
@@ -582,7 +584,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84373000" />
+    <option name="totallyTimeSpent" value="85262000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -608,13 +610,13 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35093167" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35093167" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32763976" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32142857" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32142857" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32919255" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32919255" />
@@ -822,13 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -867,31 +862,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/userInfoView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="95" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="135">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="94" />
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/userInfoView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="95" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
+        <state relative-caret-position="355">
+          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
         </state>
       </provider>
     </entry>
