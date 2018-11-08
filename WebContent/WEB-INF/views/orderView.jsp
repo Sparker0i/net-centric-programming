@@ -18,17 +18,23 @@
 
 <table border="1" cellpadding="5" cellspacing="1" >
     <tr>
-        <th>Car ID</th>
+        <th>Car</th>
+        <th>Version</th>
+        <th>Request Date</th>
+        <th>Cost Per Day</th>
         <th>Start Date</th>
         <th>End Date</th>
-        <th>Request Date</th>
+        <th>Total Cost</th>
     </tr>
     <c:forEach items="${transactions}" var="transaction" >
         <tr>
-            <td><a href="viewCar?CAR_ID=${transaction.getCarId()}">${transaction.carId}</a></td>
+            <td><a href="viewCar?CAR_ID=${transaction.getCarId()}">${transaction.getCompany()} ${transaction.getModel()}</a></td>
+            <td>${transaction.getVersion()}</td>
+            <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.getDateOfRequest()}" /></td>
+            <td>${transaction.getCostPerDay()}</td>
             <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.getStartDate()}" /></td>
             <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.getEndDate()}" /></td>
-            <td><fmt:formatDate pattern = "dd MMM yyyy" value = "${transaction.getDateOfRequest()}" /></td>
+            <td>${transaction.getCost()}</td>
         </tr>
     </c:forEach>
 </table>

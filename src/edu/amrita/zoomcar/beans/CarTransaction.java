@@ -8,22 +8,34 @@ public class CarTransaction {
     public Date dateOfRequest, startDate, endDate;
     public Double cost;
 
+    public Double getCostPerDay() {
+        return costPerDay;
+    }
+
+    public void setCostPerDay(Double costPerDay) {
+        this.costPerDay = costPerDay;
+    }
+
+    public Double costPerDay;
+
     public static final String
             COMPANY = "CAR.COMPANY",
             MODEL = "CAR.MODEL",
             VERSION = "CAR.VERSION",
             CAR_ID = "CAR.CAR_ID",
+            TRANSACTION_CAR_ID = "TRANSACTION.CAR_ID",
             START_DATE = "TRANSACTION.START_DATE",
             END_DATE = "TRANSACTION.END_DATE",
             DATE_OF_REQUEST = "TRANSACTION.DATE_OF_REQUEST",
             COST = "COST",
+            COST_PER_DAY = "CAR.COST_PER_DAY",
             USER_ID = "TRANSACTION.USER_ID";
 
     public CarTransaction() {
 
     }
 
-    public CarTransaction(String company, String model, String version, String userId, Integer carId, Date dateOfRequest, Date startDate, Date endDate, Double cost) {
+    public CarTransaction(String company, String model, String version, String userId, Integer carId, Date dateOfRequest, Date startDate, Date endDate, Double cost, Double costPerDay) {
         this.company = company;
         this.model = model;
         this.version = version;
@@ -33,6 +45,7 @@ public class CarTransaction {
         this.startDate = startDate;
         this.endDate = endDate;
         this.cost = cost;
+        this.costPerDay = costPerDay;
     }
 
     public String getCompany() {

@@ -1,11 +1,6 @@
 package edu.amrita.zoomcar.utils;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -180,21 +175,43 @@ public class DBUtils {
     }
 
     public static List<CarTransaction> getTransactions(Connection connection, User user) throws SQLException {
-        String SQL = String.format("SELECT * FROM TRANSACTION WHERE %s = ?",
-                Transaction.USER_ID);
+        String SQL = String.format("SELECT %s , %s , %s , %s, %s, %s, %s , %s , (%s - %s) * %s AS %s FROM %s,%s WHERE %s=%s AND %s=?",
+                CarTransaction.COMPANY,
+                CarTransaction.MODEL,
+                CarTransaction.VERSION,
+                CarTransaction.CAR_ID,
+                CarTransaction.DATE_OF_REQUEST,
+                CarTransaction.COST_PER_DAY,
+                CarTransaction.END_DATE,
+                CarTransaction.START_DATE,
+                CarTransaction.END_DATE,
+                CarTransaction.START_DATE,
+                CarTransaction.COST_PER_DAY,
+                CarTransaction.COST,
+                "CAR",
+                "TRANSACTION",
+                CarTransaction.CAR_ID,
+                CarTransaction.TRANSACTION_CAR_ID,
+                CarTransaction.USER_ID);
 
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
         preparedStatement.setString(1, user.getUserId());
+        System.out.println(preparedStatement.toString());
 
         ResultSet resultSet = preparedStatement.executeQuery();
         List<CarTransaction> transactions = new ArrayList<>();
         while (resultSet.next()) {
             CarTransaction transaction = new CarTransaction();
-            transaction.setCarId(resultSet.getInt(Transaction.CAR_ID));
+
+            transaction.setCompany(resultSet.getString(Car.COMPANY));
+            transaction.setModel(resultSet.getString(Car.MODEL));
+            transaction.setVersion(resultSet.getString(Car.VERSION));
+            transaction.setCarId(resultSet.getInt(Car.CAR_ID));
             transaction.setDateOfRequest(convertToUtil(resultSet.getTimestamp(Transaction.DATE_OF_REQUEST)));
             transaction.setStartDate(convertToUtil(resultSet.getTimestamp(Transaction.START_DATE)));
             transaction.setEndDate(convertToUtil(resultSet.getTimestamp(Transaction.END_DATE)));
-            transaction.setUserId(resultSet.getString(Transaction.USER_ID));
+            transaction.setCostPerDay(resultSet.getDouble(CarTransaction.COST_PER_DAY));
+            transaction.setCost(resultSet.getDouble(CarTransaction.COST));
 
             transactions.add(transaction);
         }
