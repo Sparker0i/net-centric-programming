@@ -175,7 +175,7 @@ public class DBUtils {
     }
 
     public static List<CarTransaction> getTransactions(Connection connection, User user) throws SQLException {
-        String SQL = String.format("SELECT %s , %s , %s , %s, %s, %s, %s , %s , (%s - %s) * %s AS %s FROM %s,%s WHERE %s=%s AND %s=?",
+        String SQL = String.format("SELECT %s , %s , %s , %s, %s, %s, %s , %s , (%s - %s + 1) * %s AS %s FROM %s,%s WHERE %s=%s AND %s=?",
                 CarTransaction.COMPANY,
                 CarTransaction.MODEL,
                 CarTransaction.VERSION,

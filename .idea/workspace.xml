@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9514751a-7730-4131-ac6c-57cb8e1995df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -74,7 +73,7 @@
           <entry key="gitignore" value="38" />
           <entry key="java" value="3360" />
           <entry key="json" value="41" />
-          <entry key="jsp" value="2059" />
+          <entry key="jsp" value="2117" />
           <entry key="md" value="41" />
         </counts>
       </usages-collector>
@@ -82,7 +81,7 @@
         <counts>
           <entry key="JAVA" value="3360" />
           <entry key="JSON" value="41" />
-          <entry key="JSP" value="2059" />
+          <entry key="JSP" value="2117" />
           <entry key="Markdown" value="41" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
@@ -200,11 +199,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="68" column="70" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
+            <state relative-caret-position="113">
+              <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -596,12 +594,12 @@
       <workItem from="1541653672722" duration="4164000" />
       <workItem from="1541693491212" duration="8111000" />
       <workItem from="1541703102058" duration="5333000" />
-      <workItem from="1541735555643" duration="3425000" />
+      <workItem from="1541735555643" duration="4083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88743000" />
+    <option name="totallyTimeSpent" value="89401000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,7 +614,7 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.2756972" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.2756972" />
       <window_info id="Structure" order="1" sideWeight="0.5045872" side_tool="true" weight="0.26613545" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -633,7 +631,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32763976" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32043344" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.31987578" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32919255" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32919255" />
@@ -903,11 +901,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="68" column="70" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
+        <state relative-caret-position="113">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

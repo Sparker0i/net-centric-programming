@@ -19,8 +19,8 @@
 <jsp:include page="_menu.jsp"/>
 <div class="container-large" style="padding-top: 40px;">
     <div class="row">
-        <div class="col-xs-4 col-md-6 item-photo">
-            <img style="max-width:600px; max-height: 300px;" src="${car.getImageUrl()}" />
+        <div class="col-xs-4 col-md-4 col-md-offset-1 item-photo">
+            <img height="240px" width="320px" src="${car.getImageUrl()}" />
         </div>
         <div class="col-xs-5 col-md-3" style="border:0px solid gray">
             <!-- Datos del vendedor y titulo del producto -->
