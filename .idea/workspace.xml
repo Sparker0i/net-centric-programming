@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9514751a-7730-4131-ac6c-57cb8e1995df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB.md" beforeDir="false" afterPath="$PROJECT_DIR$/DB.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,18 +71,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="38" />
-          <entry key="java" value="3360" />
+          <entry key="java" value="3364" />
           <entry key="json" value="41" />
           <entry key="jsp" value="2117" />
-          <entry key="md" value="41" />
+          <entry key="md" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3360" />
+          <entry key="JAVA" value="3364" />
           <entry key="JSON" value="41" />
           <entry key="JSP" value="2117" />
-          <entry key="Markdown" value="41" />
+          <entry key="Markdown" value="44" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
@@ -184,19 +184,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DB.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+              <first_editor relative-caret-position="896">
+                <caret line="64" column="213" selection-start-line="64" selection-start-column="213" selection-end-line="64" selection-end-column="213" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="113">
@@ -226,8 +226,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+            <state relative-caret-position="210">
+              <caret line="177" column="92" selection-start-line="177" selection-start-column="92" selection-end-line="177" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -308,9 +308,7 @@
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/CarListServlet.java" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/ViewBookedServlet.java" />
-        <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/loginView.jsp" />
-        <option value="$PROJECT_DIR$/DB.md" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/CarTransaction.java" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp" />
@@ -320,6 +318,8 @@
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" />
+        <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" />
+        <option value="$PROJECT_DIR$/DB.md" />
       </list>
     </option>
   </component>
@@ -594,12 +594,12 @@
       <workItem from="1541653672722" duration="4164000" />
       <workItem from="1541693491212" duration="8111000" />
       <workItem from="1541703102058" duration="5333000" />
-      <workItem from="1541735555643" duration="4083000" />
+      <workItem from="1541735555643" duration="4399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89401000" />
+    <option name="totallyTimeSpent" value="89717000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -614,7 +614,7 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.2756972" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.2756972" />
       <window_info id="Structure" order="1" sideWeight="0.5045872" side_tool="true" weight="0.26613545" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -625,13 +625,13 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35093167" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35093167" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32763976" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.31987578" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.31987578" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32919255" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32919255" />
@@ -816,6 +816,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -851,23 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="95" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -912,6 +901,23 @@
             <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="177" column="92" selection-start-line="177" selection-start-column="92" selection-end-line="177" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="896">
+            <caret line="64" column="213" selection-start-line="64" selection-start-column="213" selection-end-line="64" selection-end-column="213" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
