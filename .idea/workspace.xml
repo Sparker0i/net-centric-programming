@@ -7,9 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9514751a-7730-4131-ac6c-57cb8e1995df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +21,7 @@
     <session id="-966250168">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="2" />
@@ -37,8 +36,9 @@
           <entry key="project.open.time.78" value="2" />
           <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.85" value="1" />
+          <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.90" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -49,7 +49,7 @@
           <entry key="html" value="4" />
           <entry key="java" value="74" />
           <entry key="json" value="2" />
-          <entry key="jsp" value="56" />
+          <entry key="jsp" value="57" />
           <entry key="md" value="7" />
           <entry key="project" value="1" />
           <entry key="xml" value="7" />
@@ -62,7 +62,7 @@
           <entry key="HTML" value="4" />
           <entry key="JAVA" value="74" />
           <entry key="JSON" value="2" />
-          <entry key="JSP" value="56" />
+          <entry key="JSP" value="57" />
           <entry key="Manifest" value="1" />
           <entry key="Markdown" value="7" />
           <entry key="PLAIN_TEXT" value="4" />
@@ -74,7 +74,7 @@
           <entry key="gitignore" value="38" />
           <entry key="java" value="3360" />
           <entry key="json" value="41" />
-          <entry key="jsp" value="1631" />
+          <entry key="jsp" value="2059" />
           <entry key="md" value="41" />
         </counts>
       </usages-collector>
@@ -82,7 +82,7 @@
         <counts>
           <entry key="JAVA" value="3360" />
           <entry key="JSON" value="41" />
-          <entry key="JSP" value="1631" />
+          <entry key="JSP" value="2059" />
           <entry key="Markdown" value="41" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
@@ -197,11 +197,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+            <state relative-caret-position="165">
+              <caret line="68" column="70" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="38" column="59" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -210,7 +229,7 @@
         <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -227,20 +246,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+            <state relative-caret-position="353">
+              <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -298,7 +314,6 @@
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/loginView.jsp" />
         <option value="$PROJECT_DIR$/DB.md" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/CarTransaction.java" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/Car.java" />
@@ -306,6 +321,7 @@
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" />
       </list>
     </option>
   </component>
@@ -329,10 +345,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="993" />
-    <option name="y" value="25" />
-    <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1303" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -366,8 +382,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -443,6 +457,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -580,11 +596,12 @@
       <workItem from="1541653672722" duration="4164000" />
       <workItem from="1541693491212" duration="8111000" />
       <workItem from="1541703102058" duration="5333000" />
+      <workItem from="1541735555643" duration="3425000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85262000" />
+    <option name="totallyTimeSpent" value="88743000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -599,7 +616,7 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.27091634" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.2756972" />
       <window_info id="Structure" order="1" sideWeight="0.5045872" side_tool="true" weight="0.26613545" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -610,13 +627,13 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35093167" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35093167" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32763976" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32142857" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32043344" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32919255" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32919255" />
@@ -708,12 +725,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/db.json" />
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -801,12 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding>
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,34 +835,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/RegisterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="47" column="97" selection-start-line="47" selection-start-column="97" selection-end-line="47" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -869,10 +856,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp">
+    <entry file="file://$PROJECT_DIR$/DB.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+        <state relative-caret-position="225">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -885,18 +882,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+        <state relative-caret-position="353">
+          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="38" column="59" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="68" column="70" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
