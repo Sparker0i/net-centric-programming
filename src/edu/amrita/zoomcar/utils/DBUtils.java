@@ -1,6 +1,8 @@
 package edu.amrita.zoomcar.utils;
 
 import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -128,6 +130,7 @@ public class DBUtils {
         preparedStatement.executeUpdate();
     }
 
+    /* Checks whether the date range entered from the ViewCarServlet exists in the DB or not. If not, returns true */
     public static boolean checkTransactionForRange(Connection connection, Integer carId, java.util.Date startDate, java.util.Date endDate) throws SQLException {
         String SQL = String.format("SELECT * FROM TRANSACTION WHERE %s = ?", Transaction.CAR_ID);
 
@@ -136,23 +139,31 @@ public class DBUtils {
 
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
+            /* Getting start date and end date from the Database */
             java.util.Date
                     start = convertToUtil(resultSet.getTimestamp(Transaction.START_DATE)),
                     end = convertToUtil(resultSet.getTimestamp(Transaction.END_DATE));
 
-            if (startDate.after(start) && endDate.before(end))
+            //System.out.println("Check Range: " + start.toString() + " " + end.toString());
+
+            if (startDate.equals(start) || startDate.equals(end))
                 return false;
-            else if (inBetween(startDate, start, end))
+            else if (endDate.equals(start) || endDate.equals(end))
                 return false;
-            else if (inBetween(endDate, start, end))
+            else if (inBetween(startDate , start , end) && inBetween(endDate , start , end))
                 return false;
-            else if (start.after(startDate) && end.before(endDate))
+            else if (inBetween(startDate , start , end))
+                return false;
+            else if (inBetween(endDate , start , end))
+                return false;
+            else if (inBetween(start , startDate , endDate) && inBetween(end , startDate , endDate))
                 return false;
         }
         return true;
     }
 
     private static boolean inBetween(java.util.Date date, java.util.Date start, java.util.Date end) {
+        //System.out.println("In Between: " + date.toString() + " " + start.toString() + " " + end.toString());
         return date.after(start) && date.before(end);
     }
 
@@ -196,7 +207,6 @@ public class DBUtils {
 
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
         preparedStatement.setString(1, user.getUserId());
-        System.out.println(preparedStatement.toString());
 
         ResultSet resultSet = preparedStatement.executeQuery();
         List<CarTransaction> transactions = new ArrayList<>();

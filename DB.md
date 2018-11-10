@@ -34,7 +34,7 @@
         START_DATE DATE,
         END_DATE DATE,
         DATE_OF_REQUEST DATE,
-        PRIMARY KEY(USER_ID , CAR_ID , START_DATE , END_DATE)
+        PRIMARY KEY(CAR_ID , START_DATE , END_DATE)
     );
     
     insert into CAR values (1,'https://imgd.aeplcdn.com/1056x594/n/ns5dora_1420343.jpg?q=80',2700,'KL416446','Maruti Suzuki','Alto 800','STD','Grey','Petrol','Hatchback','MT',false,false,false);

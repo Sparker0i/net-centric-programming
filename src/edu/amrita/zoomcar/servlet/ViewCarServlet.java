@@ -94,14 +94,13 @@ public class ViewCarServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        //System.out.println("Do Post: " + from.toString() + " " + to.toString());
+
         User user = MyUtils.getLoggedUser(req.getSession());
         Connection connection = MyUtils.getStoredConnection(req);
         PrintWriter out = resp.getWriter();
         try {
-            if (from == null || to == null) {
-                alert(out, "Please Enter Date Range");
-            }
-            else if (from.compareTo(to) > 0) {
+            if (from.compareTo(to) > 0) {
                 alert(out, "From Data Cannot be greater than To date");
             }
             else if (DBUtils.checkTransactionForRange(connection, Integer.parseInt(carId), from, to)) {

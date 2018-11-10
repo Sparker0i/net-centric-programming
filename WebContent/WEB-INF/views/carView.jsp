@@ -62,13 +62,13 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="fromDate">From:</label>
                 <div class="col-md-8">
-                    <input type="date" class="form-control" name="fromDate" id="fromDate" title="From">
+                    <input type="date" class="form-control" name="fromDate" id="fromDate" title="From" required="required">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="toDate">To:</label>
                 <div class="col-md-8">
-                    <input type="date" class="form-control" name="toDate" id="toDate" title="From">
+                    <input type="date" class="form-control" name="toDate" id="toDate" title="From" required="required">
                 </div>
             </div>
             <div class="form-group">
