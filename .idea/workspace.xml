@@ -8,10 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9514751a-7730-4131-ac6c-57cb8e1995df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB.md" beforeDir="false" afterPath="$PROJECT_DIR$/DB.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/ViewCarServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/ViewCarServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,17 +72,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="38" />
-          <entry key="java" value="4896" />
+          <entry key="java" value="4966" />
           <entry key="json" value="41" />
-          <entry key="jsp" value="2135" />
+          <entry key="jsp" value="2137" />
           <entry key="md" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4896" />
+          <entry key="JAVA" value="4966" />
           <entry key="JSON" value="41" />
-          <entry key="JSP" value="2135" />
+          <entry key="JSP" value="2137" />
           <entry key="Markdown" value="45" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
@@ -221,11 +218,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1427">
-              <caret line="170" column="29" selection-start-line="170" selection-start-column="29" selection-end-line="170" selection-end-column="29" />
+            <state relative-caret-position="1082">
+              <caret line="165" column="10" selection-start-line="165" selection-start-column="10" selection-end-line="165" selection-end-column="10" />
               <folding>
-                <element signature="e#7323#7324#0" expanded="true" />
-                <element signature="e#7360#7361#0" expanded="true" />
                 <element signature="e#10811#10812#0" expanded="true" />
                 <element signature="e#10863#10864#0" expanded="true" />
                 <element signature="e#10930#10931#0" expanded="true" />
@@ -244,20 +239,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/ViewCarServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="90" column="86" selection-start-line="90" selection-start-column="86" selection-end-line="90" selection-end-column="86" />
+            <state relative-caret-position="307">
+              <caret line="96" column="10" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            <state relative-caret-position="240">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -335,13 +330,13 @@
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/registerView.jsp" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/beans/Car.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/userInfoView.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/orderView.jsp" />
         <option value="$PROJECT_DIR$/DB.md" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/carView.jsp" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java" />
         <option value="$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/ViewCarServlet.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp" />
       </list>
     </option>
   </component>
@@ -409,6 +404,29 @@
               <item name="NCPS" type="b2602c69:ProjectViewProjectNode" />
               <item name="NCPS" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NCPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NCPS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NCPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NCPS" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NCPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NCPS" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NCPS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NCPS" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -421,7 +439,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Sparker0i/net-centric-programming/src/edu/amrita/zoomcar/servlet/ViewCarServlet.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541702103983" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541833463658" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -553,12 +571,12 @@
       <workItem from="1541693491212" duration="8111000" />
       <workItem from="1541703102058" duration="5333000" />
       <workItem from="1541735555643" duration="7926000" />
-      <workItem from="1541824999974" duration="5619000" />
+      <workItem from="1541824999974" duration="6555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98863000" />
+    <option name="totallyTimeSpent" value="99799000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -571,8 +589,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.2804781" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.2804781" />
       <window_info id="Structure" order="1" sideWeight="0.5045872" side_tool="true" weight="0.26613545" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -582,8 +601,8 @@
       <window_info id="Web" order="7" sideWeight="0.50359714" side_tool="true" weight="0.2613546" />
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34937888" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34937888" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -821,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/carListView.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -858,11 +870,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/utils/DBUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1427">
-          <caret line="170" column="29" selection-start-line="170" selection-start-column="29" selection-end-line="170" selection-end-column="29" />
+        <state relative-caret-position="1082">
+          <caret line="165" column="10" selection-start-line="165" selection-start-column="10" selection-end-line="165" selection-end-column="10" />
           <folding>
-            <element signature="e#7323#7324#0" expanded="true" />
-            <element signature="e#7360#7361#0" expanded="true" />
             <element signature="e#10811#10812#0" expanded="true" />
             <element signature="e#10863#10864#0" expanded="true" />
             <element signature="e#10930#10931#0" expanded="true" />
@@ -873,8 +883,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/amrita/zoomcar/servlet/ViewCarServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="90" column="86" selection-start-line="90" selection-start-column="86" selection-end-line="90" selection-end-column="86" />
+        <state relative-caret-position="307">
+          <caret line="96" column="10" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/_menu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>
