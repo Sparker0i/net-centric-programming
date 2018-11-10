@@ -42,7 +42,7 @@
                 <td>Car Name</td>
                 <td>Cost Per Day</td>
                 <td>Fuel Type</td>
-                <td>Book Now</td>
+                <td>&nbsp;</td>
             </tr>
             </thead>
             <c:forEach items="${productList}" var="product">
