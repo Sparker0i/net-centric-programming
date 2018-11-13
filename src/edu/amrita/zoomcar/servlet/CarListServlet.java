@@ -77,7 +77,9 @@ public class CarListServlet extends HttpServlet {
         catch (Exception ex) {
             maxPrice = null;
         }
-        System.out.println(minPrice + " " + maxPrice);
+
+        String company = request.getParameter("company");
+        System.out.println(minPrice + " " + maxPrice + " " + company);
 
         Connection conn = MyUtils.getStoredConnection(request);
 
@@ -93,6 +95,7 @@ public class CarListServlet extends HttpServlet {
         if (minPrice != null && maxPrice != null) {
             if (maxPrice < minPrice) {
                 errorString = "";
+                dispatch(request , response , errorString , list);
             }
         }
 
@@ -116,10 +119,18 @@ public class CarListServlet extends HttpServlet {
                         iter.remove();
                     }
                 }
+                if (company != null) {
+                    if (!car.getCompany().equalsIgnoreCase(company))
+                        iter.remove();
+                }
             }
             System.out.println(list.size());
         }
 
+        dispatch(request , response , errorString , list);
+    }
+
+    private void dispatch(HttpServletRequest request , HttpServletResponse response , String errorString , List<Car> list) throws ServletException, IOException {
         request.setAttribute("errorString", errorString);
         request.setAttribute("productList", list);
 

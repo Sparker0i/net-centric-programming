@@ -19,13 +19,17 @@
     <p style="color: red;">${errorString}</p>
 
     <form method="POST" action="${pageContext.request.contextPath}/">
-        <div class="form-group col-md-4 col-md-offset-1">
-            <input type="number" name="minPrice" id="minPrice" title="Minimum Price" class="form-control" required="true"
+        <div class="form-group col-md-3 col-md-offset-1">
+            <input type="number" name="minPrice" id="minPrice" title="Minimum Price" class="form-control"
                    placeholder="Minimum Price"/>
         </div>
-        <div class="form-group col-md-4">
-            <input type="number" name="maxPrice" id="maxPrice" title="Maximum Price" class="form-control" required="true"
+        <div class="form-group col-md-3">
+            <input type="number" name="maxPrice" id="maxPrice" title="Maximum Price" class="form-control"
                    placeholder="Maximum Price"/>
+        </div>
+        <div class="form-group col-md-3">
+            <input type="text" name="company" id="company" title="Company" class="form-control"
+                   placeholder="Company"/>
         </div>
         <button type="submit" class="btn btn-danger">
             <span class="glyphicon glyphicon-search"></span> Search
