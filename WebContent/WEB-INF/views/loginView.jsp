@@ -20,11 +20,11 @@
                <table border="0">
                    <tr>
                        <td>User ID</td>
-                       <td><div class="form-group col-xs-5"><input type="text" name="userName" value= "${user.getUserId()}" /></div> </td>
+                       <td><div class="form-group col-md-10"><input type="text" class="form-control" name="userName" value= "${user.getUserId()}" /></div> </td>
                    </tr>
                    <tr>
                        <td>Password</td>
-                       <td><div class="form-group col-xs-5"><input type="password" name="password" value= "${user.getPassword()}" /></div> </td>
+                       <td><div class="form-group col-md-10"><input type="password" class="form-control" name="password" value= "${user.getPassword()}" /></div> </td>
                    </tr>
                    <tr>
                        <td>Remember me</td>

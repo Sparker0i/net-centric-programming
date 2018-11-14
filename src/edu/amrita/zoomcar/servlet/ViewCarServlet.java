@@ -62,7 +62,7 @@ public class ViewCarServlet extends HttpServlet {
         }
 
         if (errorString != null) {
-            resp.sendRedirect(req.getServletPath() + "/productList");
+            resp.sendRedirect(req.getServletPath() + "/carList");
             return;
         }
 

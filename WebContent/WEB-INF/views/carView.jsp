@@ -68,7 +68,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="toDate">To:</label>
                 <div class="col-md-8">
-                    <input type="date" class="form-control" name="toDate" id="toDate" title="From" required="required">
+                    <input type="date" class="form-control" name="toDate" id="toDate" title="To" required="required">
                 </div>
             </div>
             <div class="form-group">
