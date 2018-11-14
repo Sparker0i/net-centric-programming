@@ -48,9 +48,6 @@ public class ViewCarServlet extends HttpServlet {
         Connection connection = MyUtils.getStoredConnection(req);
 
         carId = req.getParameter(Car.CAR_ID);
-        if (carId == null) {
-            carId = (String) req.getAttribute(Car.CAR_ID);
-        }
         Car car = null;
         String errorString = null;
 
@@ -101,7 +98,7 @@ public class ViewCarServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         try {
             if (from.compareTo(to) > 0) {
-                alert(out, "From Data Cannot be greater than To date");
+                alert(out, "From Date Cannot be greater than To date");
             }
             else if (DBUtils.checkTransactionForRange(connection, Integer.parseInt(carId), from, to)) {
                 DBUtils.insertTransaction(connection, new Transaction(user.getUserId(), Integer.parseInt(carId), from, to, request));
